@@ -1,0 +1,22 @@
+{
+  "name": "uix-appstore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/js/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiajun-c/uix-appstore.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiajun-c/uix-appstore/issues"
+  },
+  "homepage": "https://github.com/jiajun-c/uix-appstore#readme",
+  "devDependencies": {
+    "electron": "^20.2.0"
+  }
+}

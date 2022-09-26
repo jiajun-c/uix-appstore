@@ -36,3 +36,19 @@ MySQL [app_user]> desc user;
 
 效果图类似，但是需要添加注册功能，直接输入帐号名，两次相同的密码即可注册。
 ![image.png](https://s2.loli.net/2022/09/23/hZDwiPqJndYQ6mk.png)
+
+- [ ] 
+
+主页上面的aur链接需要跳转到到一个单独的html，在这个页面中需要内嵌下面的页面，同时可以返回到原来的界面，所以不能使用简单连接跳转了事。
+```shell
+https://aur.archlinux.org/
+```
+可以参考我写的个人中心界面，不要简单的复制粘贴.....
+
+![image.png](https://s2.loli.net/2022/09/26/nS6qEWd2fcY3GUr.png)
+
+## 3. 已经实现的模块
+- 实现了主页，同时可以进行正常的跳转
+![image.png](https://s2.loli.net/2022/09/26/BXwbLAPav8i13cK.png)
+
+- 实现了个人中心，可以正常返回主页面

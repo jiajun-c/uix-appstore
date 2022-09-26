@@ -115,3 +115,12 @@ ul#drop li:hover {
 p#selectedId {
     display: inline-block;
 }
+
+webview {
+    display:inline-flex;
+    min-width:1350px;
+    min-height:660px;
+  }
+  webview.hide {
+    visibility: hidden;
+  }

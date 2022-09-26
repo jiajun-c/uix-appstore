@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="GWrite (WYSIWYG editor)">
+  <title></title>
+  <style>
+
+div.transbox{
+		  width: 400;
+		  height: 100px;
+		  margin: 30px 30px 30px 30px;
+		  background-color: #ffffff;
+		  border: 1px solid #FFFFFF;
+          border-radius: 20px;
+		  opacity:0.8;
+		}
+div.maintransbox{
+		  width: 400;
+		  height: 800px;
+		  margin: 30px 30px 30px 30px;
+		  background-color: #ffffff;
+          border-radius: 20px;
+		  border: 1px solid #FFFFFF;
+		  opacity:0.8;
+}
+
+div.smallbox {
+    width: 650;
+    border-radius: 10px;
+    height: 120px;
+    margin: 25px 25px 25px 25px;
+    background-color: #afeeee;
+}
+.round_icon{
+  width: 100px;
+  height: 100px;
+  /* display: flex; */
+  margin: 10px 10px 10px 10px;
+  border-radius: 50%;
+  align-items: center;
+  float: left;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+h1 {text-align: center;}
+
+</style>
+</head>
+<body style="background-image:url(../img/col.jpg);">
+  <div style="width:100%;display:flex;flex-direction:row">
+        <button id="houtui" style="background-color: blueviolet; width:20%; border-radius: 10px; color: rgb(195, 166, 223);" onclick="goBackWebView()" >back</button>
+        <!-- <button id="qianjin" style="width:20%; backgrund-color: red;border:none" onclick="goForwardWebView()" >前进</button> -->
+    </div>
+    <div class="transbox">
+        <h1>个人中心</h1>
+    </div>
+    <div class="maintransbox">
+        <div class="smallbox">
+            <img src="../img/arv.png" class="round_icon" id="useicon"/> 
+            <h2 style="float: right; margin: 35px 35px 10px 10px;" id="username"> Archer </h2>
+        </div>
+    </div>
+</body>
+<script>
+ var webview =
+  onload = () => {
+       webview = document.querySelector('webview')
+
+   }
+   function goBackWebView(){
+    window.location.replace("./index.html");
+   }
+   function goForwardWebView(){
+     webview.goForward()
+   }
+</script>
+</html>

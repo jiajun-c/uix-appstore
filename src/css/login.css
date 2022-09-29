@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/sky.jpg');
+}
+#main{
+    width: 300px;
+    padding: 40px;
+    position: absolute;   /* 绝对定位，相对于父标签来进行定位 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+    background: #191919;
+    text-align: center;
+}
+
+#main h1{
+    color: white;    /* 设置字体颜色 */
+    text-transform: uppercase;  /* 将字体全部设置成大写字母  */
+    font-weight: 500;  /*  设置字体粗细   */
+}
+/* 设置用户名输入框和密码输入框样式 */
+#user, #password{
+  border-radius: 24px;
+  border: 2px solid #3498db;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;     /* 设置输入框中竖线的颜色 */
+  transition: 0.25s;   /* 设置元素过渡效果 */
+}
+/* 设置文本框获得焦点时的样式 */
+#user, #password{
+    width: 280px;
+    border-color: #2ecc71;
+}
+#answer{
+    display: none;
+    width: auto;
+    height: 30px;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+}
+#login{
+    width: 200px;
+    height: 40px;
+    margin: auto;
+    display: block;
+    border-color: aqua;
+    background-color: #191919;
+    color: white;
+}
+
+#register{
+    width: 200px;
+    height: 40px;
+    margin: auto;
+    display: block;
+    border-color: aqua;
+    background-color: #191919;
+    color: white;
+}
+
+#register a{
+    color: white;
+    text-decoration: none;
+}
+
+#login:hover, #register:hover{
+    background-color: rgb(29, 115, 74);
+}

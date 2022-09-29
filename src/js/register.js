@@ -7,11 +7,14 @@ document.getElementById('register').onclick = function(){
     let password = document.getElementById('password').value;
     let passwordAgain = document.getElementById('passwordAgain').value;
     let answer = document.getElementById('answer');
+    answer.style.display = 'block';
     if(!password || !passwordAgain || !phone || !username){
+        answer.style.color = 'red';
         answer.innerHTML = "请输入完整信息";
         return;
     }
     if(password != passwordAgain){
+        answer.style.color = 'red';
         answer.innerHTML = "两次密码输入不一致";
         return;
     }
@@ -29,6 +32,7 @@ document.getElementById('register').onclick = function(){
     connection.query(sql, function(err, result){
         if(!err){
             if(result[0]){
+                answer.style.color = 'red';
                 answer.innerHTML = "用户已经存在";
                 return;
             }else{
@@ -36,9 +40,11 @@ document.getElementById('register').onclick = function(){
                 connection.query(sql, function(err){
                     if(err){
                         console.log(err.message);
-                        answer.innerHTML = "注册失败";
+                        answer.style.color = 'red';
+                        answer.innerHTML = "注册失败, 用户名重复";
                         return;
                     }else{
+                        answer.style.color = 'green';
                         answer.innerHTML = "注册成功";
                         setTimeout(()=>{
                             window.location.href = './login.html';

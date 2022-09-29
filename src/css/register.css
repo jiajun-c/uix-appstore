@@ -49,23 +49,25 @@ body{
 }
 
 #login{
-    width: 200px;
+    width: 100px;
     height: 40px;
     margin: auto;
     display: block;
     border-color: aqua;
     background-color: #191919;
     color: white;
+    float: left;
 }
 
 #register{
-    width: 200px;
+    width: 100px;
     height: 40px;
     margin: auto;
     display: block;
     border-color: aqua;
     background-color: #191919;
     color: white;
+    float: right;
 }
 
 #login a{

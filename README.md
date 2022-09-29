@@ -35,6 +35,7 @@ connect: 这是个按钮，进行ssh连接
 布局可以参考cloud.tencent 
 ![image.png](https://s2.loli.net/2022/09/29/CPzqlvLxBf2rsye.png)
 ddl : 10.15
+初始情况下没有框，需要有根据ip，user, passwd连接服务器，连接后获取服务器其他信息。
 
 ### ME
 - [ ] 开发download部分

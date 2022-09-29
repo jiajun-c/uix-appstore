@@ -1,21 +1,25 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url('../img/sky.jpg');
+    /* background-image: url('../img/sky.jpg'); */
+    /* background-color: white;*/
 }
 #main{
+    margin: auto;
     width: 300px;
     padding: 40px;
     position: absolute;   /* 绝对定位，相对于父标签来进行定位 */
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%); 
-    background: #191919;
+    /* background: #191919; */
+    /* background: white; */
     text-align: center;
+    /* opacity: 0.0; */
 }
 
 #main h1{
-    color: white;    /* 设置字体颜色 */
+    color: black;    /* 设置字体颜色 */
     text-transform: uppercase;  /* 将字体全部设置成大写字母  */
     font-weight: 500;  /*  设置字体粗细   */
 }
@@ -30,29 +34,36 @@ body{
   padding: 14px 10px;
   width: 200px;
   outline: none;
-  color: white;     /* 设置输入框中竖线的颜色 */
+  /* color: white;     设置输入框中竖线的颜色 */
   transition: 0.25s;   /* 设置元素过渡效果 */
 }
 /* 设置文本框获得焦点时的样式 */
-#user, #password{
+/* #user, #password{
     width: 280px;
     border-color: #2ecc71;
+} */
+#user:hover{
+    border-color: rgb(24, 242, 24);
 }
+
+#password:hover{
+    border-color: rgb(24, 242, 24);
+}
+
 #answer{
     display: none;
     width: auto;
     height: 30px;
     margin: auto;
     text-align: center;
-    background-color: white;
 }
 #login{
     width: 100px;
     height: 40px;
     margin: auto;
     display: block;
-    border-color: aqua;
-    background-color: #191919;
+    border-color: rgb(62, 21, 129);
+    background-color: #21abde;
     color: white;
     float: left;
 }
@@ -62,8 +73,8 @@ body{
     height: 40px;
     margin: auto;
     display: block;
-    border-color: aqua;
-    background-color: #191919;
+    border-color: rgb(62, 21, 129);
+    background-color: #21abde;
     color: white;
     float: right;
 }

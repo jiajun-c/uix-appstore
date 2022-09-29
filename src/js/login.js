@@ -7,6 +7,11 @@ document.getElementById('login').onclick = function(){
     let number = document.getElementById('user').value;
     let password = document.getElementById('password').value;
     let answer = document.getElementById('answer');
+    if(!number || !password){
+        answer.style.color = 'red';
+        answer.innerHTML = '请输入完整信息';
+        return;
+    }
     let connection = mysql.createConnection({
         host: '124.222.235.230',
         user: 'root',

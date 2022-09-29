@@ -1,0 +1,23 @@
+#back{
+    display: block;
+    background-color: gray;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+}
+
+#back a{
+    text-decoration: none;
+    color: white;
+}
+
+#back:hover{
+    background-color: aqua;
+}
+
+
+#wb{
+    display: inline-flex;
+    width: 1400px;
+    height: 900px;
+}

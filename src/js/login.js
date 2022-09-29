@@ -8,10 +8,10 @@ document.getElementById('login').onclick = function(){
     let password = document.getElementById('password').value;
     let answer = document.getElementById('answer');
     let connection = mysql.createConnection({
-        host: 'localhost',
+        host: '124.222.235.230',
         user: 'root',
-        password: '123456',
-        database: 'userdata'
+        password: 'risc-v',
+        database: 'app_user'
     });
     connection.connect();
     let sql = "select passwd from user where phone='" + number + "';";
@@ -19,7 +19,7 @@ document.getElementById('login').onclick = function(){
         if(!err){
             if(result[0]){
                 if(password == result[0]['passwd']){
-                    answer.innerHTML = '登陆成功';
+                    answer.innerHTML = "登陆成功";
                     setTimeout(()=>{
                         window.location.href='./index.html';
                     }, 2000);

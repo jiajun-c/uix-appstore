@@ -18,10 +18,10 @@ document.getElementById('register').onclick = function(){
 
 
     let connection = mysql.createConnection({
-        host: 'localhost',
+        host: '124.222.235.230',
         user: 'root',
-        password: '123456',
-        database: 'userdata'
+        password: 'risc-v',
+        database: 'app_user'
     });
     connection.connect();
     let sql = "select passwd from user where phone='" + phone + "';";
@@ -48,6 +48,7 @@ document.getElementById('register').onclick = function(){
                 })
             }
         }else{
+            console.log(err.message);
             return alert('读取数据库失败');
         }
     })

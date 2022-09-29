@@ -18,5 +18,8 @@
   "homepage": "https://github.com/jiajun-c/uix-appstore#readme",
   "devDependencies": {
     "electron": "^20.2.0"
+  },
+  "dependencies": {
+    "mysql": "^2.18.1"
   }
 }

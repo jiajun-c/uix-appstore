@@ -2,6 +2,7 @@
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const fs = require('fs');
+const mysql = require('mysql');
 
 function createWindow () {
   // Create the browser window.
@@ -15,9 +16,49 @@ function createWindow () {
       webviewTag: true
     }
   })
-  
+  var flag = false;
+  fs.readFile("./config/user.json", 'utf8', function(err, data){
+    if(err){
+        console.log(err.message);
+        return;
+    }else{
+        if(!data){
+            mainWindow.loadFile('src/html/login.html');
+            return;
+        }else{
+            mainWindow.loadFile('src/html/index.html');
+        }
+        // let user = JSON.parse(data.toString());
+        // let connection = mysql.createConnection({
+        //     host: '124.222.235.230',
+        //     user: 'root',
+        //     password: 'risc-v',
+        //     database: 'app_user'
+        // });
+        // connection.connect();
+        // let sql = "select passwd from user where phone='" + user.phone + "';";
+        // connection.query(sql, function(err, result){
+        //     if(!err){
+        //         if(result[0]){
+        //             if(user.password == result[0]['passwd']){
+        //                 mainWindow.loadFile('src/html/index.html');
+        //                 return;
+        //             }else{
+        //                 mainWindow.loadFile('src/html/login.html');
+        //                 return;
+        //             }
+        //         }else{
+        //             mainWindow.loadFile('src/html/login.html');
+        //             return;
+        //         }
+        //     }else{
+        //         mainWindow.loadFile('src/html/login.html');
+        //         return;
+        //     }
+        //     })
+        }
+    })
   // and load the index.html of the app.
-  mainWindow.loadFile('src/html/login.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

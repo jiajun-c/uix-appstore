@@ -53,7 +53,6 @@ h1 {text-align: center;}
 <body style="background-image:url(../img/col.jpg);">
   <div style="width:100%;display:flex;flex-direction:row">
         <button id="houtui" style="background-color: blueviolet; width:20%; border-radius: 10px; color: rgb(195, 166, 223);" onclick="goBackWebView()" >back</button>
-        <!-- <button id="qianjin" style="width:20%; backgrund-color: red;border:none" onclick="goForwardWebView()" >前进</button> -->
     </div>
     <div class="transbox">
         <h1>个人中心</h1>
@@ -69,7 +68,6 @@ h1 {text-align: center;}
  var webview =
   onload = () => {
        webview = document.querySelector('webview')
-
    }
    function goBackWebView(){
     window.location.replace("./index.html");

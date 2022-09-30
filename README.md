@@ -19,8 +19,8 @@
 ## 2. 需求
 
 ### You
-- [ ] 在aur链接部分添加一个返回上一级页面的按钮，可以用栈实现。 ddl: 10.4
-- [ ] 用户只需要登录一次, 在`config/user.json`中存放用户的信息 ddl: 10.5
+- [ ] 在aur链接部分添加一个返回上一级页面的按钮，可以用栈实现。 ddl: 10.4 check
+- [ ] 用户只需要登录一次, 在`config/user.json`中存放用户的信息 ddl: 10.5 check
 - [ ] 编写`html/servers.html`，在其中显示了我们连接的服务器的情况(可以使用ssh 连接)
 ![image.png](https://s2.loli.net/2022/09/29/Yrf8kRuK5dqp6iA.png)
 页面布局如上，每个框对应一个服务器

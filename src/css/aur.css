@@ -1,4 +1,5 @@
 #back{
+    border-radius: 10px;
     display: block;
     background-color: gray;
     text-align: center;
@@ -7,6 +8,7 @@
     float: left;
 }
 #before{
+    border-radius: 10px;
     display: block;
     background-color: gray;
     text-align: center;
@@ -18,7 +20,7 @@
     overflow-y: scroll;
 } */
 
-#back:hover, #before:hover{
+#back:hover, #before:hover, #disappear:hover{
     background-color: aqua;
 }
 
@@ -31,4 +33,23 @@
 body{
     height: 100%;
     width: 100%;
+}
+
+#alert{
+    display: none;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    color: red;
+    font-size: 35px;
+}
+
+#disappear{
+    border-radius: 10px;
+    display: none;
+    background-color: gray;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    float: right;
 }

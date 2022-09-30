@@ -4,17 +4,21 @@
     text-align: center;
     width: 100px;
     height: 40px;
+    float: left;
+}
+#before{
+    display: block;
+    background-color: gray;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    float: right;
 }
 /* #main{
     overflow-y: scroll;
 } */
 
-#back a{
-    text-decoration: none;
-    color: white;
-}
-
-#back:hover{
+#back:hover, #before:hover{
     background-color: aqua;
 }
 

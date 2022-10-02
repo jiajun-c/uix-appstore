@@ -84,3 +84,6 @@ https://aur.archlinux.org/
 ```
 可以参考我写的个人中心界面，不要简单的复制粘贴.....
 ![image.png](https://s2.loli.net/2022/09/26/nS6qEWd2fcY3GUr.png)
+
+- 实现页面上的查找功能和结果显示
+![image.png](https://s2.loli.net/2022/10/02/Wz3P9nOykYKRrt5.png)

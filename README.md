@@ -87,3 +87,7 @@ https://aur.archlinux.org/
 
 - 实现页面上的查找功能和结果显示
 ![image.png](https://s2.loli.net/2022/10/02/Wz3P9nOykYKRrt5.png)
+
+
+- 实现将结果插入到html代码中
+![image.png](https://s2.loli.net/2022/10/03/YWQfMKi4s7JEetv.png)

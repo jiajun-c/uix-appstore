@@ -1,0 +1,20 @@
+#package_box {
+    /* width: 800px; */
+    height: 60px;
+    margin: 5px 5px 20px 20px;
+    border-radius: 10px;
+    background-color: rgb(77, 159, 235);
+}
+
+/* This is for the text in the box */
+#box_text {
+    line-height: 20px; 
+    margin-top: 10px;
+    margin: 20px 20px 15px 20px;
+    font-size: 20px;
+}
+
+/* .body {
+    background:rgb(96, 42, 42);   
+    background-image: "src/img/flower.jpg";
+} */

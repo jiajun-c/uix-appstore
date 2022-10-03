@@ -22,9 +22,44 @@ window.onload = function () {
         // fs.readFile("package.json", (err, data) => {
         //   myData.innerHTML = data;
         // })
+        text = ""
         fs.readFile("data/aur_packages.json",(err, data)=> {
-          myData.innerText = data;
+          // myData.innerText = data;
+          var json = JSON.parse(data)
+          // myData.innerText = json[0].from;
+          for (var i = 0; i < json.length; i++) {
+            text = text +"<div id = \"package_box\"> "+ 
+            "<div style=\"float: left;\" id=\"box_text\">" +
+              "from: " + json[i].from + 
+            "</div>" + 
+            "<div style=\"float: right;\" id=\"box_text\">" + 
+            json[i].software + 
+            "</div>" + 
+            "</div>";
+        }
+        myData.innerHTML = text;
         } )
+        // var url = "data/aur_packages.json"
+        // var request = new XMLHttpRequest();
+        // request.open("get", url);
+        // request.send(null);
+        // request.onload = function() {
+        //   if (request.status == 200) {
+        //     var json = JSON.parse(request.responseText);
+        //     text = ""
+        //     for (var i = 0; i < json.length; i++) {
+        //         text = text +"<div id = \"package_box\"> "+ 
+        //         "<div style=\"float: left;\" id=\"box_text\">" +
+        //           "from: " + json[i].from + 
+        //         "</div>" + 
+        //         "<div style=\"float: right;\" id=\"box_text\">" + 
+        //         json[i].software + 
+        //         "</div>" + 
+        //         "</div>";
+        //     }
+        //     myData.innerHTML = text;
+        //   }
+        // }
     })
   }
 }

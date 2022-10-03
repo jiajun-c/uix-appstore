@@ -40,7 +40,7 @@ document.getElementById('login').onclick = function(){
                     answer.innerHTML = "登陆成功";
                     setTimeout(()=>{
                         window.location.href='./index.html';
-                    }, 2000);
+                    }, 100);
                     return;
                 }else{
                     answer.style.color = 'red';

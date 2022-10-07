@@ -15,10 +15,12 @@ window.onload = function () {
     child.exec('yay -Ss '.concat(input.value), function(err, data) {
         // myData.innerHTML = data;
         console.log(data);
-        fs.writeFile("data/temp", data, (err) => {
+        fs.writeFileSync("data/temp", data, (err) => {
           console.log(err);
-          exec("python -u src/backend/search_package.py");
+          // exec("python -u src/backend/search_package.py");
         });
+        exec("python -u src/backend/search_package.py");
+
         // fs.readFile("package.json", (err, data) => {
         //   myData.innerHTML = data;
         // })

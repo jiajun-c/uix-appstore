@@ -29,3 +29,56 @@
     background-color: aqua;
     opacity: 0.8;
 }
+
+#search_package {
+    /* /* text-align: center; */
+	background-color: #fff;
+	border-radius: 10px;
+	width: 150px;
+	height: 30px;
+	position: absolute;
+	left: 50%;
+	top: 2%;
+	transform: translate(-50%,-50%);
+    margin-bottom: 50px;
+}
+
+#btn {
+    padding-left:4px;
+    border-radius: 10px;
+	width: 70px;
+    text-align: center;
+    line-height: 30px;
+	height: 30px;
+    font-size: 16px;
+	background-color: rgb(125, 109, 214);
+    color: #fff;
+    position: absolute;
+	top: 2%; 
+    margin-left: 40px;
+    left: 60%;
+	transform: translate(-50%,-50%);
+    /* margin: 10px 10px 10px 10px; */
+}
+
+#btn:active {
+    background-color: rgb(202, 159, 243);
+    opacity: 0.8;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background: rgba(0,0,0,0.06);
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.08);
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: rgba(0,0,0,0.12);
+    -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+}
+

@@ -27,16 +27,27 @@ window.onload = function () {
           // myData.innerText = data;
           var json = JSON.parse(data)
           // myData.innerText = json[0].from;
-          for (var i = 0; i < json.length; i++) {
-            text = text +"<div id = \"package_box\"> "+ 
-            "<div style=\"float: left;\" id=\"box_text\">" +
-              "from: " + json[i].from + 
-            "</div>" + 
-            "<div style=\"float: right;\" id=\"box_text\">" + 
-            json[i].software + 
-            "</div>" + 
-            "</div>";
-        }
+        //   for (var i = 0; i < json.length; i++) {
+        //     text = text +"<div id = \"package_box\"> "+ 
+        //     "<div style=\"float: left;\" id=\"box_text\">" +
+        //       "from: " + json[i].from + 
+        //     "</div>" + 
+        //     "<div style=\"float: right;\" id=\"box_text\">" + 
+        //     json[i].software + 
+        //     "</div>" + 
+        //     "</div>";
+        // }
+        for (var i = 0; i < json.length; i++) {
+          text = text +"<div id = \"package_box\"> "+ 
+          "<div style=\"float: left;\" id=\"box_text\">" +
+            "from: " + json[i].from + 
+          "</div>" + 
+          "<button style=\"float: right;\" id=\"download_bottom\" onclick=\"\">Install</button>" +
+          "<div style=\"float: right;\" id=\"box_text\">" + 
+          json[i].software + 
+          "</div>" + 
+          "</div>";
+      }
         myData.innerHTML = text;
         } )
         // var url = "data/aur_packages.json"

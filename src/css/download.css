@@ -10,11 +10,22 @@
 #box_text {
     line-height: 20px; 
     margin-top: 10px;
-    margin: 20px 20px 15px 20px;
+    margin: 20px 20px 15px 15px;
     font-size: 20px;
 }
 
-/* .body {
-    background:rgb(96, 42, 42);   
-    background-image: "src/img/flower.jpg";
-} */
+#download_bottom {
+    /* box-shadow: 0 2px; */
+    border-radius: 5px;
+    line-height: 20px; 
+    margin-top: 10px;
+    margin: 20px 20px 15px 15px;
+    font-size: 15px;
+    color: rgb(67, 32, 99);
+    background-color: rgb(174, 143, 245);
+}
+
+#download_bottom:active {
+    background-color: aqua;
+    opacity: 0.8;
+}

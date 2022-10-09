@@ -2,7 +2,7 @@
 const fs = require('fs');
 const exec = require('child_process').execSync;
 var child = require('child_process');
-var arr;
+var arr = document.getElementsByTagName('button');
 
 window.onload = function () {
   const btn = document.querySelector("#btn");
@@ -48,25 +48,30 @@ window.onload = function () {
         } )
     })
     arr = document.getElementsByTagName('button');
+    // for (var i = 1; i < arr.length; i++) {
+    //   arr[i].onclick = function click() {
+    //     console.log('Button clicked');
+    //     ans = "touch ~/" + this.id;
+    //     child.exec(ans);
+    //   }
+    // }
     for (var i = 1; i < arr.length; i++) {
-      arr[i].onclick = function click() {
+      arr[i].addEventListener(function() {
         console.log('Button clicked');
         ans = "touch ~/" + this.id;
         child.exec(ans);
-      }
+      })
     }
   }
+  // for (var i = 1; i < arr.length; i++) {
+  //   arr[i].onclick = function click() {
+  //     console.log('Button clicked');
+  //     ans = "touch ~/" + this.id;
+  //     child.exec(ans);
+  //   }
+  // }
   // var arr = document.getElementsByTagName('button')
 }
-
-// for (var i = 1; i < arr.length; i++) {
-//   arr[i].onclick = function click() {
-//     console.log('Button clicked');
-//     ans = "touch ~/" + this.id;
-//     child.exec(ans);
-//   }
-// }
-
 function download(name) {
     
 }

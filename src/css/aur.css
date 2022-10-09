@@ -27,8 +27,7 @@
 }
 
 #back:hover, #up:hover{
-    background-color: blueviolet;
-    border-radius: 10px;
+    background-color: rgb(79, 76, 81);
 }
 
 /* button{

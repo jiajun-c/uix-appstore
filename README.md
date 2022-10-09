@@ -45,9 +45,12 @@ ddl : 10.15
 3. 实现动态前端页面进行机器的切换，尽量实现按钮点击特效。
 ddl: 10.15
 
-- [ ]开发搜索引擎
+- [ ] 开发搜索引擎
 根据关键字对软件包进行查找，随后进行上面的操作
 ddl: 10.18
+
+- [ ] 对搜索栏进行美化
+ddl: 10.20
 
 
 ## 3. 已经实现的模块
@@ -91,3 +94,7 @@ https://aur.archlinux.org/
 
 - 实现将结果插入到html代码中
 ![image.png](https://s2.loli.net/2022/10/03/YWQfMKi4s7JEetv.png)
+
+- 搜索框更新， 后续还需要修改。
+
+![image.png](https://s2.loli.net/2022/10/09/qWSfoR3gjkPT1FM.png)

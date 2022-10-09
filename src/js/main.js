@@ -2,6 +2,8 @@
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const fs = require('fs');
+const mysql = require('mysql');
+var lastUrl = [];
 
 function createWindow () {
   // Create the browser window.
@@ -9,15 +11,26 @@ function createWindow () {
     width: 1500,
     height: 1000,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
-      nodeIntegration: true,
-      contextIsolation: false,
-      webviewTag: true
+        preload: path.join(__dirname, 'preload.js'),
+        nodeIntegration: true,
+        contextIsolation: false,
+        webviewTag: true
     }
   })
-  
+    fs.readFile("./config/user.json", 'utf8', function(err, data){
+        if(err){
+            console.log(err.message);
+            return;
+        }else{
+            if(!data){
+                mainWindow.loadFile('src/html/login.html');
+                return;
+            }else{
+                mainWindow.loadFile('src/html/index.html');
+            }
+        }
+    })
   // and load the index.html of the app.
-  mainWindow.loadFile('src/html/login.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

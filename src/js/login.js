@@ -1,5 +1,6 @@
 let mysql = require('mysql');
 const { read } = require('original-fs');
+const fs = require('fs');
 
 
 
@@ -26,6 +27,15 @@ document.getElementById('login').onclick = function(){
             answer.style.backgroundColor = 'white';
             if(result[0]){
                 if(password == result[0]['passwd']){
+                    let userData = {'phone': number, 'password': password};
+                    const userStr = JSON.stringify(userData);
+                    console.log(userStr);
+                    fs.writeFile('config/user.json', userStr, function(err){
+                        if(err){
+                            console.log('用户信息写入文件失败');
+                            console.log(err.message);
+                        }
+                    })
                     answer.style.color = 'green';
                     answer.innerHTML = "登陆成功";
                     setTimeout(()=>{

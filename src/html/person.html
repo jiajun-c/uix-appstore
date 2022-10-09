@@ -45,6 +45,24 @@ div.smallbox {
   overflow: hidden;
 }
 
+#signOut{
+    display: block;
+    width: 100px;
+    height: 40px;
+    background-color:gray;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#signOut a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+#signOut:hover{
+    background-color: blue;
+}
+
 
 h1 {text-align: center;}
 
@@ -63,6 +81,7 @@ h1 {text-align: center;}
             <h2 style="float: right; margin: 35px 35px 10px 10px;" id="username"> Archer </h2>
         </div>
     </div>
+    <button id="signOut" onclick="window.location.replace('./login.html');">退出登陆</button>
 </body>
 <script>
  var webview =

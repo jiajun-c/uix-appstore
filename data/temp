@@ -1,0 +1,148 @@
+aur/ss-tproxy-git r851.2b18f64-1 (+0 0.00) 
+    A rudimentary script for building SS/SSR/V2Ray/Socks5 transparent proxy environments
+aur/v2ray-extra 4.41.1-1 (+0 0.00) 
+    The extra resources of v2ray
+aur/qv2ray-plugin-command 2.0.0-2 (+0 0.00) (Out-of-date: 2022-03-01) 
+    Qv2ray Plugin: Command
+aur/across 0.1.3-1 (+0 0.00) 
+    The next GUI client for v2ray core
+aur/qv2ray-plugin-command-git 20201115.r10.c47fd64-1 (+0 0.00) 
+    Qv2ray Plugin: Command
+aur/qv2ray-plugin-ssr-dev-git 20200517.r55.1cba7de-1 (+0 0.00) 
+    Qv2ray Plugin: ShadowsocksR (Development Build)
+aur/xray-git 1.4.2.r4.1e3d739-1 (+0 0.00) 
+    The best v2ray-core, with XTLS support.
+aur/v2ray-rust-git r62.22ae05d-2 (+0 0.00) 
+    An Opinionated Lightweight Implementation of V2Ray, in Rust Programming Language
+aur/qv2ray-plugin-naiveproxy-git 20201115.r29.932bb06-1 (+0 0.00) 
+    Qv2ray Plugin: NaiveProxy (for Qv2ray v2.6.0-rc2+ only)
+aur/ss-tproxy 4.6.2-1 (+0 0.00) 
+    搭建 SS/SSR/V2Ray/Socks5 透明代理环境的简易脚本
+aur/qv2ray-plugin-command-dev-git 20201115.r21.566fe69-1 (+0 0.00) 
+    Qv2ray Plugin: Command (Development Build)
+aur/v2rayxplus 1.1.4-1 (+0 0.00) 
+    Cross-platform GUI Client for V2Ray written in Qt and Golang
+aur/qv2ray-plugin-ssr-git 20200923.r84.adae383-1 (+0 0.00) 
+    Qv2ray Plugin: ShadowsocksR
+aur/qv2ray-plugin-trojan-dev-git 20201101.r52.d646bc1-1 (+0 0.00) 
+    Qv2ray Plugin: Trojan (Development Build)
+aur/qv2ray-v3 3.0.0rc1-5 (+0 0.00) (Orphaned) 
+    A cross platform connection manager for V2Ray and other backends.
+aur/v2ray-exporter 0.5.1-1 (+0 0.00) 
+    An exporter that collect V2Ray metrics over its Stats API and export them to Prometheus
+aur/qv2ray-plugin-trojan-go-git 20201115.r28.7a0c3c9-1 (+0 0.00) 
+    Qv2ray Plugin: Trojan-Go (Stable Build)
+aur/v2ray-browserforwarder 4.41.1-1 (+0 0.00) 
+    The browser forwarder resources of v2ray
+aur/v2ray-rules-git r6.32b35fd-2 (+0 0.00) 
+    A simple script for v2ray to set up a transparent proxy.
+aur/libqv2ray-git r170.45d50f5-1 (+0 0.00) (Orphaned) 
+    Modular, feature-rich infrastructure library for Qv2ray
+aur/qnodeeditor 2.1.7-1 (+0 0.00) 
+    Qt-based library aimed at graph-controlled data processing (qv2ray edition)
+aur/v2ray-geoip-lite 202112061314-2 (+0 0.00) (Orphaned) 
+    GeoIP List for V2Ray (only-cn-private version)
+aur/v2socks 0.2.1-1 (+0 0.00) 
+    An opinioned lightweight socks5 server and vmess (v2ray) client.
+aur/qv2ray-plugin-trojan-git 20200719.r44.56b7da0-1 (+0 0.00) 
+    Qv2ray Plugin: Trojan
+aur/v2ray-china-list 20221009003748-1 (+0 0.00) 
+    V2Ray deployment of felixonmars/dnsmasq-china-list project
+aur/stairspeedtest-reborn-bin 0.7.1-4 (+0 0.00) 
+    Proxy performance batch tester based on Shadowsocks(R) and V2Ray
+aur/qvplugins-git 20220324-1 (+0 0.00) 
+    Plugins for Qv2ray.
+aur/qvssr 2.1.2-1 (+0 0.00) (Orphaned) 
+    A fork of qv2ray which add support of shadowsocksr
+aur/qv2ray-plugin-interface-git r88.b767b4c-1 (+0 0.00) (Orphaned) 
+    Qv2ray plugin interface
+aur/v2ray-go-git gbbeec9e-1 (+0 0.00) 
+    A set of network tools that help you to build your own computer network (git version).
+aur/qv2ray-plugin-trojan 3.0.0-1 (+0 0.00) 
+    Qv2ray Plugin: Trojan
+aur/dnsmasq-domainlist-v2ray 210430-1 (+0 0.00) (Orphaned) 
+    dnsmasq domain list converted from v2ray domain-list-community
+aur/v2csub-git 20211127-1 (+0 0.00) 
+    Subscriber for v2ray-core
+aur/v2ray-cap-git 1.0.0-1 (+1 0.00) 
+    V2Ray Core with Capabilities for Transparent Proxies
+aur/litespeedtest 0.8.0-1 (+1 0.54) 
+    A simple tool for batch test ss/ssr/v2ray/trojan servers.
+aur/v2ray-domain-list-custom 202210062214-1 (+1 0.07) 
+    A list of domains to be used as geosites for routing purpose in Project V
+aur/v2ray-domain-list-china 20221002123152-1 (+1 0.00) 
+    A list of domains to be used as geosites for routing purpose in Project V
+aur/v2ray-git 5.1.0.r17.ga4a3f4dee-1 (+1 0.00) 
+    A set of network tools that helps you to build your own computer network (git version).
+aur/v2ray-plugin-git 1.2.0.r0.gca36119-1 (+1 0.00) 
+    A SIP003 plugin based on v2ray for shadowsocks (git version)
+aur/v2ray-geoip-custom 202210062214-1 (+1 0.07) 
+    Custom GeoIP List for V2Ray
+aur/v2ray-rules-dat-autoupdate 1.3-2 (+1 0.02) 
+    Enhanced edition of V2Ray and Xray rules dat files, compatible with Trojan-Go. Automaitcally update.
+aur/v2raya-git 20220920.r1217.f1b93b2-1 (+2 0.00) 
+    v2rayA nightly version
+aur/vxray-rules-dat-git r202201010556-1 (+2 0.00) 
+    Enhanced edition of V2Ray and Xray rules dat files, compatible with Trojan-Go. Automaitcally update by using crontab. DO NOT flag out-dated.
+aur/xray-bin 1.5.4-1 (+2 0.00) (Orphaned) (Out-of-date: 2022-10-09) 
+    The best v2ray-core, with XTLS support.
+aur/v2ray-rules-dat-git r202108222209-1 (+2 0.00) 
+    Enhanced edition of V2Ray rules dat files, compatible with Trojan-Go.
+aur/qv2ray-dev-git 2.7.0.7001.r3056.6b1ee7be-1 (+3 0.00) (Installed: 2.7.0.7002.r3058.fb44fb14-2)
+    Cross-platform V2Ray Client written in Qt (Development Release)
+aur/gg 0.2.13-3 (+3 0.79) 
+    A command-line tool for one-click proxy in your research and development without installing v2ray or anything else (only for linux).
+aur/qv2ray-static-nightly-bin 20211215-1 (+6 0.01) (Orphaned) 
+    A cross platform connection manager for V2Ray and other backends
+aur/qv2ray-git 3.0.0.rc1.r24.g2aec20c6-1 (+6 0.16) (Out-of-date: 2022-09-23) 
+    A cross platform connection manager for V2Ray and other backends
+aur/xray 1.6.0-1 (+6 0.01) 
+    The best v2ray-core, with XTLS support
+aur/v2ray-desktop 2.3.1-1 (+7 0.02) 
+    A cross-platform GUI proxy client that supports Shadowsocks(R), V2Ray, and Trojan protocols (Stable Release)
+aur/v2raya-bin 1.5.9.1698.1-1 (+8 0.07) 
+    A web GUI client of Project V which supports VMess, VLESS, SS, SSR, Trojan and Pingtunnel protocols
+aur/qv2ray 2.7.0-1 (+17 0.17) 
+    Cross-platform V2ray Client written in Qt (Stable Release)
+aur/v2raya 1.5.9.1698.1-1 (+17 1.90) 
+    A web GUI client of Project V which supports VMess, VLESS, SS, SSR, Trojan and Pingtunnel protocols
+archlinuxcn/xray 1.6.0-1 (6.5 MiB 23.2 MiB) 
+    The best v2ray-core, with XTLS support
+archlinuxcn/v2raya-tray-git r5.14ff75f-1 (7.7 KiB 19.0 KiB) 
+    Operate v2rayA in the system tray (git version)
+archlinuxcn/v2raya-git 20221004.r1225.11aa2b0-1 (7.4 MiB 23.1 MiB) 
+    v2rayA nightly version
+archlinuxcn/v2raya 1.5.9.1698.1-1 (7.7 MiB 25.5 MiB) 
+    A Linux web GUI client of Project V
+archlinuxcn/v2ray-git 5.1.0.r22.gd5b5d6095-1 (6.9 MiB 24.2 MiB) 
+    A platform for building proxies to bypass network (git version)
+archlinuxcn/v2ray-desktop 2.3.1-1 (655.1 KiB 1.5 MiB) 
+    A cross-platform GUI proxy client that supports Shadowsocks, V2Ray, and Trojan protocols (Stable Release)
+archlinuxcn/v2ray-dctxmei 4.45.2-1 (7.5 MiB 38.2 MiB) 
+    A platform for building proxies to bypass network restrictions
+archlinuxcn/v2ray-china-list 20221009003748-1 (303.5 KiB 1.1 MiB) 
+    V2Ray deployment of felixonmars/dnsmasq-china-list project
+archlinuxcn/qv2ray-plugin-trojan-go-dev-git 20210502.r50.9aa876a-3 (132.9 KiB 278.0 KiB) [qv2ray-plugin] 
+    Qv2ray Plugin: Trojan-Go (Development Build)
+archlinuxcn/qv2ray-plugin-trojan-dev-git 20210127.r69.1990d6f-5 (305.1 KiB 1.1 MiB) [qv2ray-plugin] 
+    Qv2ray Plugin: Trojan (Development Build)
+archlinuxcn/qv2ray-plugin-ssr-dev-git 20201214.r105.6f4f87e-1 (219.2 KiB 793.9 KiB) [qv2ray-plugin] 
+    Qv2ray Plugin: ShadowsocksR (Development Build)
+archlinuxcn/qv2ray-plugin-naiveproxy-dev-git 20201213.r41.59c2d46-1 (92.7 KiB 225.9 KiB) [qv2ray-plugin] 
+    Qv2ray Plugin: NaiveProxy (Development Release)
+archlinuxcn/qv2ray-plugin-command-dev-git 20210313.r27.8f8147c-1 (55.0 KiB 126.0 KiB) [qv2ray-plugin] 
+    Qv2ray Plugin: Command (Development Build)
+archlinuxcn/qv2ray-dev-git 2.7.0.7002.r3058.fb44fb14-2 (1.4 MiB 4.0 MiB) (Installed)
+    Cross-platform V2Ray Client written in Qt (Development Release)
+archlinuxcn/gg 0.2.13-4 (4.6 MiB 15.5 MiB) 
+    A command-line tool for one-click proxy in your research and development without installing v2ray or anything else (only for linux).
+archlinuxcn/across 0.1.3-10 (623.2 KiB 2.4 MiB) 
+    The next GUI client for v2ray core
+community/v2ray-geoip 202210060105-1 (1.4 MiB 9.4 MiB) (Installed)
+    GeoIP List for V2Ray
+community/v2ray-domain-list-community 20221008040018-1 (148.1 KiB 1.4 MiB) (Installed)
+    A list of domains to be used as geosites for routing purpose in Project V
+community/v2ray 5.1.0-2 (6.9 MiB 24.1 MiB) (Installed)
+    A platform for building proxies to bypass network restrictions
+community/shadowsocks-v2ray-plugin 5.0.8-1 (4.2 MiB 13.9 MiB) 
+    A SIP003 plugin based on v2ray for shadowsocks

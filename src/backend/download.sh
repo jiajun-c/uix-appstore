@@ -1,0 +1,1 @@
+sudo -S yay -S $1 < auto_talk

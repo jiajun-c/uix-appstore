@@ -59,23 +59,19 @@ body{
     color: black;
 }
 #login{
-    width: 100px;
-    height: 40px;
+    background-color: rgb(22, 200, 235); width:40%; border-radius: 10px; color: rgb(195, 166, 223);
     margin: auto;
     display: block;
     border-color: rgb(62, 21, 129);
-    background-color: #21abde;
     color: white;
     float: left;
 }
 
 #register{
-    width: 100px;
-    height: 40px;
+    background-color: rgb(22, 200, 235); width:40%; border-radius: 10px; color: rgb(195, 166, 223);
     margin: auto;
     display: block;
     border-color: rgb(62, 21, 129);
-    background-color: #21abde;
     color: white;
     float: right;
 }

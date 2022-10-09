@@ -21,17 +21,18 @@ body{
 }
 
 #user, #password, #uid, #passwordAgain{
-  border-radius: 24px;
-  border: 2px solid #3498db;
-  background: none;
-  display: block;
-  margin: 20px auto;
-  text-align: center;
-  padding: 14px 10px;
-  width: 200px;
-  outline: none;
-  /* color: white;     设置输入框中竖线的颜色 */
-  transition: 0.25s;   /* 设置元素过渡效果 */
+    /* background-color: rgb(22, 200, 235); width:40%; border-radius: 10px; color: rgb(195, 166, 223); */
+    border-radius: 24px;
+    border: 2px solid #3498db;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;     /*设置输入框中竖线的颜色 */
+    transition: 0.25s;   /* 设置元素过渡效果 */
 }
 
 /* #user, #password, #uid, #passwordAgain{
@@ -61,23 +62,19 @@ body{
 }
 
 #login{
-    width: 100px;
-    height: 40px;
+    background-color: rgb(22, 200, 235); width:40%; border-radius: 10px;
     margin: auto;
     display: block;
     border-color: rgb(62, 21, 129);
-    background-color: #21abde;
     color: white;
     float: left;
 }
 
 #register{
-    width: 100px;
-    height: 40px;
+    background-color: rgb(22, 200, 235); width:40%; border-radius: 10px;
     margin: auto;
     display: block;
     border-color: rgb(62, 21, 129);
-    background-color: #21abde;
     color: white;
     float: right;
 }

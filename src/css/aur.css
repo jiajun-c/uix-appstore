@@ -1,27 +1,42 @@
 #back{
+    font-family:"Times New Roman",Georgia,Serif;
+    font-weight: bold;
     display: block;
-    background-color: gray;
-    text-align: center;
-    width: 100px;
-    height: 40px;
+    width: 5%;
+    height: 100%;
+    border-style: none;
+    background-color: #333;
+    color: white;
     float: left;
 }
-#before{
+#up{
+    font-family:"Times New Roman",Georgia,Serif;
+    font-weight: bold;
     display: block;
-    background-color: gray;
-    text-align: center;
-    width: 100px;
-    height: 40px;
+    width: 5%;
+    height: 100%;
+    border-style: none;
+    background-color: #333;
+    color: white;
     float: right;
 }
-/* #main{
-    overflow-y: scroll;
-} */
-
-#back:hover, #before:hover{
-    background-color: aqua;
+#navigation{
+    width: 100%;
+    height: 50px;
+    background-color: #333;
 }
 
+#back:hover, #up:hover{
+    background-color: blueviolet;
+    border-radius: 10px;
+}
+
+/* button{
+    width: 50%;
+    height: 50%;
+    background-image: url(../img/back.jpg);
+    border-style: none;
+} */
 
 #wb{
     display: inline-flex;

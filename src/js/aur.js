@@ -8,7 +8,7 @@ onload=()=>{
     webview = document.getElementById('wb');
 }
 
-document.getElementById("before").onclick = ()=>{
+document.getElementById("up").onclick = ()=>{
     if(webview.canGoBack()){
         webview.goBack();
     }

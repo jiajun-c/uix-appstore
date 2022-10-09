@@ -1,0 +1,76 @@
+aur/clash-meta-alpha-git Prerelease.Alpha.r0.g2899a12-1 (+0 0.00) 
+    A rule-based tunnel in Go
+aur/clash-dashboard-git 0.3.0.r102.ga70ad6b-3 (+0 0.00) 
+    Web Dashboard for Clash
+aur/yacd-git 0.3.6.r12.ge405512-2 (+0 0.00) 
+    Yet Another Clash Dashboard
+aur/clashup 0.3.0-2 (+0 0.00) 
+    auto update clash's config file
+aur/clash-geoip 20220912-2 (+0 0.00) 
+    A GeoLite2 data created by MaxMind
+aur/potool-renamed 0.19-1 (+0 0.00) (Orphaned) 
+    Program to help editing po files, without poedit name clash
+aur/hashclash-cuda-git r53.0df53bb-1 (+0 0.00) 
+    Project HashClash - MD5 & SHA-1 cryptanalysis with CUDA support
+aur/clash-tun 20210920.r717.48a4641-1 (+0 0.00) (Orphaned) 
+    Clash Tun Scripts for Linux
+aur/clash-for-windows-bin-git 0.19.25-1 (+0 0.00) 
+    A Windows/macOS/Linux GUI based on Clash and Electron.
+aur/clash-subscription-updater-git r3.e2083ea-1 (+1 0.00) 
+    Update the clash config.yaml peroidly with optional patch
+aur/clash-meta 1.13.1-1 (+1 0.84) 
+    Another Clash Kernel by MetaCubeX
+aur/clash-verge 1.1.0-4 (+1 0.84) 
+    A Clash GUI based on tauri.
+aur/gaurodan 1-2 (+1 0.00) 
+    Horizontal shmup, a clash between human cities and colossal monsters
+aur/hashclash-git r46.d833657-1 (+1 0.00) 
+    Project HashClash - MD5 & SHA-1 cryptanalysis
+aur/yacd 0.3.6-1 (+1 0.00) 
+    Yet Another Clash Dashboard
+aur/clash-dev-git 1.11.0.r0.gc231fd1-1 (+1 0.00) 
+    A rule-based tunnel in Go
+aur/clashy-git 0.1.21-1 (+1 0.00) (Orphaned) 
+    A GUI proxy client for Windows / Mac / Ubuntu Desktop based on Clash and Electron. Windows / Mac / Ubuntu 适用的Clash客户端.
+aur/fclash 1.3.2-1 (+1 0.03) 
+    A Clash Proxy Fronted based on Clash
+aur/clash-meta-bin 1.13.1-0 (+2 0.44) 
+    Another Clash Kernel by MetaCubeX
+aur/clash-verge-bin 1.0.5-1 (+2 0.12) (Out-of-date: 2022-09-05) 
+    A Clash GUI based on tauri.
+aur/clashy-bin 0.2.5-1 (+2 0.27) 
+    A GUI proxy client for Windows / Mac / Ubuntu Desktop based on Clash and Electron. Windows / Mac / Ubuntu 适用的Clash客户端.
+aur/clash-for-windows-electron-bin 0.20.5-1 (+3 0.83) 
+    A Windows/macOS/Linux GUI based on Clash and Electron. Using system clash and electron
+aur/clash-for-windows-chinese 0.20.5-1 (+11 2.57) (Installed)
+    A Windows/macOS/Linux GUI based on Clash and Electron（Chinese version.）.
+aur/clash-premium-bin 2022.08.26-1 (+13 0.79) 
+    Close-sourced pre-built Clash binary with TUN support
+aur/clash-for-windows-bin 0.20.5-1 (+14 2.33) 
+    A Windows/macOS/Linux GUI based on Clash and Electron.
+archlinuxcn/yacd 0.3.6-1 (398.4 KiB 1.1 MiB) 
+    Yet Another Clash Dashboard
+archlinuxcn/clash-verge 1.1.0-5 (4.2 MiB 8.1 MiB) 
+    A Clash GUI based on tauri.
+archlinuxcn/clash-premium-bin 2022.03.21-1 (4.3 MiB 13.6 MiB) 
+    Close-sourced pre-built Clash binary with TUN support
+archlinuxcn/clash-meta 1.13.1-2 (6.3 MiB 21.1 MiB) 
+    Another Clash Kernel by MetaCubeX
+archlinuxcn/clash-git 1.11.8.r8.g3e2b08f-1 (3.1 MiB 9.9 MiB) 
+    A rule-based tunnel in Go (git version)
+archlinuxcn/clash-geoip 20220912-2 (2.2 MiB 5.3 MiB) 
+    A GeoLite2 data created by MaxMind
+archlinuxcn/clash-dev-git 1.11.8.r8.g3e2b08f-1 (3.1 MiB 9.9 MiB) 
+    A rule-based tunnel in Go
+archlinuxcn/clash-dctxmei 1.11.8-2 (3.1 MiB 9.8 MiB) 
+    A rule-based tunnel in Go
+archlinuxcn/clash-dashboard-git 0.3.0.r184.g23db9ed-1 (134.5 KiB 427.1 KiB) 
+    Web Dashboard for Clash
+community/haskell-clash-prelude 1.6.4-7 (2.2 MiB 14.5 MiB) 
+    Clash: a functional hardware description language - Prelude library
+community/haskell-clash-lib 1.6.4-9 (3.4 MiB 23.5 MiB) 
+    Clash: a functional hardware description language - As a library
+community/clash-ghc 1.6.4-9 (977.9 KiB 5.4 MiB) 
+    CAES Language for Synchronous Hardware
+community/clash 1.11.8-1 (3.1 MiB 9.8 MiB) (Installed)
+    A rule based proxy in Go

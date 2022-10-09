@@ -1,6 +1,7 @@
 let mysql = require('mysql');
 const { read } = require('original-fs');
 const fs = require('fs');
+const ipcRenderer = require('electron').ipcRenderer;
 
 
 
@@ -8,54 +9,17 @@ document.getElementById('login').onclick = function(){
     let number = document.getElementById('user').value;
     let password = document.getElementById('password').value;
     let answer = document.getElementById('answer');
-    if(!number || !password){
-        answer.style.color = 'red';
-        answer.innerHTML = '请输入完整信息';
-        return;
+    let answerData = ipcRenderer.sendSync("login", number, password);
+    answer.style.color = 'red';
+    answer.style.display = 'block';
+    answer.style.backgroundColor = 'white';
+    if(answerData == '登陆成功'){
+        answer.style.color = 'green';
     }
-    let connection = mysql.createConnection({
-        host: '124.222.235.230',
-        user: 'root',
-        password: 'risc-v',
-        database: 'app_user'
-    });
-    connection.connect();
-    let sql = "select passwd from user where phone='" + number + "';";
-    connection.query(sql, function(err, result){
-        if(!err){
-            answer.style.display = 'block';
-            answer.style.backgroundColor = 'white';
-            if(result[0]){
-                if(password == result[0]['passwd']){
-                    let userData = {'phone': number, 'password': password};
-                    const userStr = JSON.stringify(userData);
-                    console.log(userStr);
-                    fs.writeFile('config/user.json', userStr, function(err){
-                        if(err){
-                            console.log('用户信息写入文件失败');
-                            console.log(err.message);
-                        }
-                    })
-                    answer.style.color = 'green';
-                    answer.innerHTML = "登陆成功";
-                    setTimeout(()=>{
-                        window.location.href='./index.html';
-                    }, 100);
-                    return;
-                }else{
-                    answer.style.color = 'red';
-                    answer.innerHTML = "密码错误";
-                    return;
-                }
-            }else{
-                answer.style.color = 'red';
-                answer.innerHTML = "用户不存在";
-                return;
-            }
-        }else{
-            console.log(err.message);
-            alert("读取数据库失败");
-            return;
-        }
-    })
+    answer.innerHTML = answerData;
+    if(answerData == '登陆成功'){
+        setTimeout(()=>{
+            window.location.href = '../html/index.html';
+        }, 1000)
+    }
 }

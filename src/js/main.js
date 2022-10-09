@@ -3,7 +3,52 @@ const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const fs = require('fs');
 const mysql = require('mysql');
-var lastUrl = [];
+const ipcMain = require('electron').ipcMain;
+
+
+ipcMain.on('login', function(event, user, password){
+    if(!user || !password){
+        event.returnValue = '请输入完整信息';
+        return;
+    }
+    let connection = mysql.createConnection({
+        host: '124.222.235.230',
+        user: 'root',
+        password: 'risc-v',
+        database: 'app_user'
+    });
+    connection.connect();
+    let sql = "select passwd from user where phone='" + user + "';";
+    connection.query(sql, function(err, result){
+        if(!err){
+            if(result[0]){
+                if(password == result[0]['passwd']){
+                    let userData = {'phone': user, 'password': password};
+                    const userStr = JSON.stringify(userData);
+                    console.log(userStr);
+                    fs.writeFile('config/user.json', userStr, function(err){
+                        if(err){
+                            console.log('用户信息写入文件失败');
+                            console.log(err.message);
+                        }
+                    })
+                    event.returnValue = '登陆成功';
+                    return;
+                }else{
+                    event.returnValue = '密码错误';
+                    return;
+                }
+            }else{
+                event.returnValue = '用户不存在';
+                return;
+            }
+        }else{
+            console.log(err.message);
+            alert("读取数据库失败");
+            return;
+        }
+    })
+})
 
 function createWindow () {
   // Create the browser window.

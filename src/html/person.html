@@ -78,18 +78,19 @@ h1 {text-align: center;}
             <h2 style="float: right; margin: 35px 35px 10px 10px;" id="username"> Archer </h2>
         </div>
     </div>
-    <button id="signOut" onclick="window.location.replace('./login.html');">SignOut</button>
+    <button id="signOut">SignOut</button>
 </body>
+<script src="../js/person.js"></script>
 <script>
- var webview =
-  onload = () => {
-       webview = document.querySelector('webview')
-   }
-   function goBackWebView(){
-    window.location.replace("./index.html");
-   }
-   function goForwardWebView(){
-     webview.goForward()
-   }
+    var webview =
+    onload = () => {
+        webview = document.querySelector('webview')
+    }
+    function goBackWebView(){
+        window.location.replace("./index.html");
+    }
+    function goForwardWebView(){
+        webview.goForward()
+    }
 </script>
 </html>

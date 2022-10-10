@@ -4,7 +4,9 @@ const path = require('path')
 const fs = require('fs');
 const mysql = require('mysql');
 const ipcMain = require('electron').ipcMain;
+const { dialog } = require('electron')
 
+var myWindow_base = null;
 
 ipcMain.on('login', function(event, user, password){
     if(!user || !password){
@@ -47,6 +49,22 @@ ipcMain.on('login', function(event, user, password){
             alert("读取数据库失败");
             return;
         }
+    })
+})
+
+ipcMain.on("chooseAvatar", function(event){
+    dialog.showOpenDialog(myWindow_base, {
+    properties: ['openFile'],
+    filters: [
+        { name: 'Images', extensions: ['jpg', 'png', 'gif'] }
+    ]
+    }).then(result => {
+        if(!result.canceled){
+            event.returnValue = result.filePaths;
+        }
+        return;
+    }).catch(err => {
+        console.log(err)
     })
 })
 
@@ -106,6 +124,9 @@ function createWindow () {
         webviewTag: true
     }
   })
+  if(!myWindow_base){
+    myWindow_base = mainWindow;
+  }
     fs.readFile("./config/user.json", 'utf8', function(err, data){
         if(err){
             console.log(err.message);

@@ -47,7 +47,7 @@ window.onload = function () {
         myData.innerHTML = text;
         } )
     })
-    arr = document.getElementsByTagName('button');
+    // arr = document.getElementsByTagName('button');
     // for (var i = 1; i < arr.length; i++) {
     //   arr[i].onclick = function click() {
     //     console.log('Button clicked');
@@ -55,22 +55,22 @@ window.onload = function () {
     //     child.exec(ans);
     //   }
     // }
-    for (var i = 1; i < arr.length; i++) {
-      arr[i].addEventListener(function() {
-        console.log('Button clicked');
-        ans = "touch ~/" + this.id;
-        child.exec(ans);
-      })
+    // for (var i = 1; i < arr.length; i++) {
+    //   arr[i].addEventListener(function() {
+    //     console.log('Button clicked');
+    //     ans = "touch ~/" + this.id;
+    //     child.exec(ans);
+    //   })
+    // }
+  }
+  var arr = document.getElementsByTagName('button')
+  for (var i = 1; i < arr.length; i++) {
+    arr[i].onclick = function click() {
+      console.log('Button clicked');
+      ans = "touch ~/" + this.id;
+      child.exec(ans);
     }
   }
-  // for (var i = 1; i < arr.length; i++) {
-  //   arr[i].onclick = function click() {
-  //     console.log('Button clicked');
-  //     ans = "touch ~/" + this.id;
-  //     child.exec(ans);
-  //   }
-  // }
-  // var arr = document.getElementsByTagName('button')
 }
 function download(name) {
     

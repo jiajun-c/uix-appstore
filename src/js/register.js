@@ -44,7 +44,7 @@ document.getElementById('register').onclick = function(){
                 if(err){
                     console.log(err.message);
                 }else{
-                    let tempUrl = "../img/" + username + '.png';
+                    let tempUrl = "../../config/" + username + '.png';
                     fs.writeFile(path.join(__dirname, tempUrl), data, function(err){
                         if(err){
                             console.log(err.message);

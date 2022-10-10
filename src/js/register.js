@@ -1,61 +1,31 @@
 let mysql = require('mysql');
+const ipcRenderer = require('electron').ipcRenderer;
 
 
 document.getElementById('register').onclick = function(){
-    let phone = document.getElementById('uid').value;
-    let username = document.getElementById('user').value;
-    let password = document.getElementById('password').value;
-    let passwordAgain = document.getElementById('passwordAgain').value;
+    document.getElementById('answer').style.display = 'none';
+    document.getElementById("repeatUser").style.display = 'none';
+    document.getElementById("repeatName").style.display = 'none';
+    document.getElementById("errPwd").style.display = 'none';
+    let phone = document.getElementById('phoneNum').value;
+    let username = document.getElementById('username').value;
+    let password = document.getElementById('pwd').value;
+    let passwordAgain = document.getElementById('pwdAgain').value;
     let answer = document.getElementById('answer');
-    answer.style.display = 'block';
-    if(!password || !passwordAgain || !phone || !username){
+    let answerData = ipcRenderer.sendSync("register", phone, username, password, passwordAgain);
+    if(answerData === "请输入完整信息"){
+        answer.style.display = 'block';
         answer.style.color = 'red';
-        answer.innerHTML = "请输入完整信息";
-        return;
+        answer.innerHTML = answerData;
+    }else if(answerData === "用户已经存在"){
+        document.getElementById("repeatUser").style.display = 'block';
+    }else if(answerData === "用户名重复"){
+        document.getElementById("repeatName").style.display = 'block';
+    }else if(answerData === "注册成功"){
+        answer.style.display = 'block';
+        answer.style.color = 'green';
+        answer.innerHTML = answerData;
+    }else if(answerData === "两次密码输入不一致"){
+        document.getElementById("errPwd").style.display = 'block';
     }
-    if(password != passwordAgain){
-        answer.style.color = 'red';
-        answer.innerHTML = "两次密码输入不一致";
-        return;
-    }
-
-
-    let connection = mysql.createConnection({
-        host: '124.222.235.230',
-        user: 'root',
-        password: 'risc-v',
-        database: 'app_user'
-    });
-    connection.connect();
-    let sql = "select passwd from user where phone='" + phone + "';";
-
-    connection.query(sql, function(err, result){
-        if(!err){
-            if(result[0]){
-                answer.style.color = 'red';
-                answer.innerHTML = "用户已经存在";
-                return;
-            }else{
-                let sql = "insert into user(username, passwd, phone) values('" + username + "','" + password +"','" + phone + "');";
-                connection.query(sql, function(err){
-                    if(err){
-                        console.log(err.message);
-                        answer.style.color = 'red';
-                        answer.innerHTML = "注册失败, 用户名重复";
-                        return;
-                    }else{
-                        answer.style.color = 'green';
-                        answer.innerHTML = "注册成功";
-                        setTimeout(()=>{
-                            window.location.href = './login.html';
-                        }, 2000);
-                        return;
-                    }
-                })
-            }
-        }else{
-            console.log(err.message);
-            return alert('读取数据库失败');
-        }
-    })
 }

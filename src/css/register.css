@@ -1,89 +1,167 @@
-body{
-    margin: 0;
-    padding: 0;
-    /* background-image: url('../img/sky.jpg'); */
-}
-#main{
-    width: 300px;
-    padding: 40px;
-    position: absolute;   /* 绝对定位，相对于父标签来进行定位 */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%); 
-    /* background: #191919; */
-    text-align: center;
-}
-
-#main h1{
-    color: black;    /* 设置字体颜色 */
-    text-transform: uppercase;  /* 将字体全部设置成大写字母  */
-    font-weight: 500;  /*  设置字体粗细   */
-}
-
-#user, #password, #uid, #passwordAgain{
-    /* background-color: rgb(22, 200, 235); width:40%; border-radius: 10px; color: rgb(195, 166, 223); */
-    border-radius: 24px;
-    border: 2px solid #3498db;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    padding: 14px 10px;
-    width: 200px;
-    outline: none;
-    color: white;     /*设置输入框中竖线的颜色 */
-    transition: 0.25s;   /* 设置元素过渡效果 */
-}
-
-/* #user, #password, #uid, #passwordAgain{
-    width: 280px;
-    border-color: #2ecc71;
-} */
-#user:hover{
-    border-color: rgb(24, 242, 24);
-}
-#password:hover{
-    border-color: rgb(24, 242, 24);
-}
-#uid:hover{
-    border-color: rgb(24, 242, 24);
-}
-#passwordAgain:hover{
-    border-color: rgb(24, 242, 24);
-}
-
-#answer{
-    display: none;
-    width: auto;
-    height: 30px;
+.picture{
+    position: relative;
     margin: auto;
+    max-height: 100px !important;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+    border-radius: 50% !important;
+    left: 250px;
+    background-color: #ffffff !important;
+    vertical-align: middle;
+    border-style: none;
+    box-sizing: border-box;
+    cursor: pointer;
     text-align: center;
+}
+
+.main{
+    margin: auto;
+    width: 600px;
+    height: 600px;
+    background-color: white;
+}
+
+#title{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    font-weight: 500;
+    line-height: 1.2;
+    box-sizing: border-box;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+}
+
+#phoneNum, #username{
+    position: relative;
+    margin: auto;
+    opacity: 0.7 !important;
+    background-color: rgba(33, 33, 33, 0.28) !important;
+    width: 400px;
     color: black;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    padding-bottom: 1rem !important;
+    padding-top: 1rem !important;
+    border-radius: 50rem !important;
+    border: 0 !important;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    display: block;
+}
+
+#pwd, #pwdAgain{
+    position: relative;
+    margin: auto;
+    opacity: 0.7 !important;
+    background-color: rgba(33, 33, 33, 0.28) !important;
+    width: 150px;
+    color: black;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    padding-bottom: 1rem !important;
+    padding-top: 1rem !important;
+    border-radius: 50rem !important;
+    border: 0 !important;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    display: inline-block;
+}
+#pwd{
+    left: 12%;
+}
+
+#pwdAgain{
+    left: 16%;
 }
 
 #login{
-    background-color: rgb(22, 200, 235); width:40%; border-radius: 10px;
+    position: relative;
     margin: auto;
-    display: block;
-    border-color: rgb(62, 21, 129);
-    color: white;
-    float: left;
+    width: 30%;
+    display: inline-block;
+    color: #ffffff;
+    background-color: rgb(65, 175, 219);
+    border-color: #ffffff;
+    cursor: pointer;
+    border-radius: 2rem;
+    outline: none !important;
+    vertical-align: middle;
+    opacity: 0.9 !important;
+    font-weight: 500 !important;
+    padding-left: 3.75rem !important;
+    padding-right: 3.75rem !important;
+    padding-bottom: 0.75rem !important;
+    padding-top: 0.75rem !important;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 #register{
-    background-color: rgb(22, 200, 235); width:40%; border-radius: 10px;
+    position: relative;
     margin: auto;
-    display: block;
-    border-color: rgb(62, 21, 129);
-    color: white;
-    float: right;
-}
-
-#login a{
-    color: white;
-    text-decoration: none;
+    width: 77%;
+    display: inline-block;
+    color: #ffffff;
+    background-color: rgb(65, 175, 219);
+    border-color: #ffffff;
+    cursor: pointer;
+    border-radius: 2rem;
+    outline: none !important;
+    vertical-align: middle;
+    opacity: 0.9 !important;
+    font-weight: 500 !important;
+    padding-left: 3.75rem !important;
+    padding-right: 3.75rem !important;
+    padding-bottom: 0.75rem !important;
+    padding-top: 0.75rem !important;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 #login:hover, #register:hover{
-    background-color: rgb(29, 115, 74);
+    background-color: rgb(104, 98, 98);
+}
+
+#or{
+    font-size: 1rem;
+    margin: 0.75rem !important;
+    box-sizing: border-box;
+    text-align: center !important;
+    line-height: 1.5;
+    color: black;
+}
+
+#spanPlace{
+    opacity: 0.7 !important;
+    margin-right: 1rem !important;
+    text-align: center !important;
+    font-size: 12px !important;
+    font-weight: 400;
+    font-family: Poppins, Helvetica, "sans-serif";
+    line-height: 1.5;
+}
+#aPlace{
+    font-weight: 500 !important;
+    text-align: center !important;
+    font-size: 12px !important;
+    font-family: Poppins, Helvetica, "sans-serif";
+    line-height: 1.5;
+}
+#answer{
+    text-align: center;
+}
+
+.alert{
+    text-align: center;
+    font-size: 1.5rem;
+    color: red;
+    font-weight: bold;
+    display: none;
+    font-family: Poppins, Helvetica, "sans-serif";
 }

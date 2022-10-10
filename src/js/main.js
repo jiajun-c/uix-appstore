@@ -50,6 +50,50 @@ ipcMain.on('login', function(event, user, password){
     })
 })
 
+ipcMain.on("register", function(event, phone, username, pwd, pwdAgain){
+    if(!pwd || !pwdAgain || !phone || !username){
+        event.returnValue = "请输入完整信息";
+        return;
+    }
+    if(pwd != pwdAgain){
+        event.returnValue = "两次密码输入不一致";
+        return;
+    }
+
+    let connection = mysql.createConnection({
+        host: '124.222.235.230',
+        user: 'root',
+        password: 'risc-v',
+        database: 'app_user'
+    });
+    connection.connect();
+    let sql = "select passwd from user where phone='" + phone + "';";
+
+    connection.query(sql, function(err, result){
+        if(!err){
+            if(result[0]){
+                event.returnValue = "用户已经存在";
+                return;
+            }else{
+                let sql = "insert into user(username, passwd, phone) values('" + username + "','" + pwd +"','" + phone + "');";
+                connection.query(sql, function(err){
+                    if(err){
+                        console.log(err.message);
+                        event.returnValue = "用户名重复";
+                        return;
+                    }else{
+                        event.returnValue = "注册成功";
+                        return;
+                    }
+                })
+            }
+        }else{
+            console.log(err.message);
+            return alert('读取数据库失败');
+        }
+    })
+})
+
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({

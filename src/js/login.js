@@ -1,9 +1,31 @@
 let mysql = require('mysql');
 const { read } = require('original-fs');
+const path = require('path');
 const fs = require('fs');
 const ipcRenderer = require('electron').ipcRenderer;
 
-
+onload = ()=>{
+    fs.readFile(path.join(__dirname, "../../config/user.json"), (err, data)=>{
+        if(err){
+            console.log(err.message);
+        }else{
+            if(data){
+                let json = JSON.parse(data);
+                document.getElementById("phoneNum").value = json.phone;
+                document.getElementById("pwd").value = json.password;
+                console.log(json);
+                let url = '../../config/' + json.phone + '.png';
+                try{
+                    if(fs.existsSync(path.join(__dirname, url))){
+                        document.getElementById("avatar").src = url;
+                    }
+                }catch(err){
+                    console.log(err);
+                }
+            }
+        }
+    })
+}
 
 document.getElementById('login').onclick = function(){
     let number = document.getElementById('phoneNum').value;

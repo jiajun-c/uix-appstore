@@ -44,9 +44,18 @@ document.getElementById('register').onclick = function(){
                 if(err){
                     console.log(err.message);
                 }else{
-                    let tempUrl = "../../config/" + username + '.png';
+                    let tempUrl = "../../config/" + phone + '.png';
                     fs.writeFile(path.join(__dirname, tempUrl), data, function(err){
                         if(err){
+                            console.log(err.message);
+                        }
+                    })
+                    let userData = {'phone': phone, 'password': password};
+                    const userStr = JSON.stringify(userData);
+                    console.log(userStr);
+                    fs.writeFile(path.join(__dirname, "../../config/user.json"), userStr, function(err){
+                        if(err){
+                            console.log('用户信息写入文件失败');
                             console.log(err.message);
                         }
                     })

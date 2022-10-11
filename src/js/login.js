@@ -4,12 +4,16 @@ const path = require('path');
 const fs = require('fs');
 const ipcRenderer = require('electron').ipcRenderer;
 
+var userData;
+
 onload = ()=>{
     fs.readFile(path.join(__dirname, "../../config/user.json"), (err, data)=>{
         if(err){
             console.log(err.message);
         }else{
-            if(data){
+            if(data.byteLength > 0){
+                console.log(new Boolean(data));
+                console.log(data);
                 let json = JSON.parse(data);
                 document.getElementById("phoneNum").value = json.phone;
                 document.getElementById("pwd").value = json.password;
@@ -22,9 +26,23 @@ onload = ()=>{
                 }catch(err){
                     console.log(err);
                 }
+            }else{
+                console.log("没有数据")
             }
         }
     })
+}
+
+document.getElementById("phoneNum").oninput = ()=>{
+    let phone = document.getElementById("phoneNum").value;
+    try{
+        let url = '../../config/' + phone + '.png';
+        if(fs.existsSync(path.join(__dirname, url))){
+            document.getElementById("avatar").src = url;
+        }
+    }catch(err){
+        console.log(err);
+    }
 }
 
 document.getElementById('login').onclick = function(){

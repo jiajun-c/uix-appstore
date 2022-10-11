@@ -127,7 +127,7 @@ function createWindow () {
   if(!myWindow_base){
     myWindow_base = mainWindow;
   }
-    fs.readFile("./config/user.json", 'utf8', function(err, data){
+    fs.readFile(path.join(__dirname, "../../config/user.json"), 'utf8', function(err, data){
         if(err){
             console.log(err.message);
             return;

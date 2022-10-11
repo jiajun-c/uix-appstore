@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/about.css">
+    <title>About</title>
+</head>
+<body>
+    <br/>
+    <div id="main">
+        <img src="../img/login.jpg" class="picture" >
+        <div style="text-align: center;">
+            <span id="versionData"></span>
+            <!-- 这个在正式上线后，会通过onload加载 -->
+        </div>
+        <br/><br/><br/>
+        <form>
+            <span class="information" id="update">新版更新<span style="float: right; display: none;" id="Newest">已经是最新版</span></span>
+
+            <span class="information">评个分吧</span> 
+
+
+            <!-- 评分主要是在上架后跳转到目标网站，尚未实现 -->
+
+
+            <span class="information">联系我们<span style="float: right;">2581545272@qq.com</span></span>
+            <!-- 这里邮箱只是暂时填，后续更改 -->
+
+
+            <span class="information">
+                <a target="_blank" href="https://github.com/jiajun-c/uix-appstore/blob/main/README.md" style="text-decoration:none; color: black;">
+                    项目介绍</a>
+            </span>
+            <span class="information">
+                <a target="_blank" href="https://github.com/jiajun-c/uix-appstore" style="text-decoration:none; color: black;">
+                    项目地址</a>
+            </span>
+        </form>
+        <br/><br/><br/>
+    </div>
+    <div style="display: block; text-align: center; margin: auto;">
+            <a href="./Disclaimer.html">版权声明，隐私管理，服务管理</a>
+            <!-- 这里面并没有内容，尚未实现 -->
+    </div>
+</body>
+<script>
+    let updateFlag = false;
+    onload = ()=>{
+        document.getElementById("versionData").innerHTML = "VersionData";
+
+        // 后续下面用于实现检查是否存在更新的版本，如果存在则把updateFlag置
+        //为true并在后续点击新版更新的时候打开弹窗，否则把#Newest的display置为block
+    }
+
+    document.getElementById("update").onclick = ()=>{
+        if(updateFlag){
+            window.open("./update.html", "Update");
+        }else{
+            document.getElementById("Newest").style.display = 'block';
+            document.getElementById("Newest").style.color = 'red';
+            setTimeout(()=>{
+                document.getElementById("Newest").style.color = 'black';
+                document.getElementById("Newest").style.display = 'none';
+            },2000)
+        }
+    }
+
+
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/update.css">
+    <title>Update</title>
+</head>
+<body>
+    <br/>
+    <div id="main">
+        <img src="../img/login.jpg" class="picture" >
+        <div style="text-align: center;">
+            <span id="versionData"></span>
+            <!-- 这个在正式上线后，会通过onload加载 -->
+        </div>
+        <br/><br/><br/>
+        <ul>
+            <li><span style="display: block;">新版本特点一</span></li>
+            <li><span style="display: block;">新版本特点二</span></li>
+            <li><span style="display: block;">新版本特点三</span></li>
+        </ul>
+        <div style="text-align: center;">
+            <button id="updateButton">更新</button>
+        </div>
+    </div>
+</body>
+<script>
+    onload = ()=>{
+        document.getElementById("versionData").innerHTML = "Version";
+    }
+
+    document.getElementById("updateButton").onclick = ()=>{
+        // 待实现
+    }
+</script>
+</html>

@@ -6,7 +6,11 @@ var child = require('child_process');
 window.onload = function () {
   const btn = document.querySelector("#btn");
   const myData = document.getElementById("res");
+  const ret = document.getElementById('ret')
   const input = document.getElementById('search_package')
+  input.onclick =function() {
+    window.location.replace("./index.html")
+  };
   btn.onclick = function () {
     // 读取data.txt文件
     console.log(input.nodeValue);
@@ -37,6 +41,11 @@ window.onload = function () {
     })
   }
 }
+
+function goBackWebView(){
+  window.location.replace("./index.html");
+}
+
 
 function download(name) {
   

@@ -19,7 +19,7 @@ onload = () => {
         if(err){
             console.log(err.message);
         }else{
-            if(data){
+            if(data.byteLength > 0){
                 let json = JSON.parse(data);
                 let url = "../../config/" + json.phone + '.png';
                 try{

@@ -2,16 +2,16 @@
 const fs = require('fs');
 const exec = require('child_process').execSync;
 var child = require('child_process');
+let arr = document.getElementsByTagName('button');
 
-window.onload = function () {
-  const myData = document.getElementById("res");
-  const ret = document.getElementById('ret')
-  const input = document.getElementById('search_package')
-  // input.onclick =function() {
-  //   window.location.replace("./index.html")
-  // };
-  
-}
+// window.onload = function () {
+//   const myData = document.getElementById("res");
+//   const ret = document.getElementById('ret')
+//   const input = document.getElementById('search_package')
+//   // input.onclick =function() {
+//   //   window.location.replace("./index.html")
+//   // };
+// }
 const btn = document.querySelector("#btn");
 const myData = document.getElementById("res");
 btn.onclick = function () {
@@ -34,7 +34,7 @@ btn.onclick = function () {
         "<div style=\"float: left;\" id=\"box_text\">" +
           "from: " + json[i].from + 
         "</div>" + 
-        "<button style=\"float: right;\" id=\"download_bottom\" onclick=\"\">Install</button>" +
+        "<button style=\"float: right;\" id=\"download_bottom\">Install</button>" +
         "<div style=\"float: right;\" id=\"box_text\">" + 
         json[i].software + 
         "</div>" + 
@@ -43,7 +43,21 @@ btn.onclick = function () {
       myData.innerHTML = text;
       } )
   })
+  arr = document.getElementsByTagName('button');
+  for (var i = 1; i < arr.length; i++) {
+    arr[i].addEventListener('click', function () {
+      console.log("dedede");
+      child.exec("touch ~/dede");
+    })
 }
+}
+// for (var i = 1; i < arr.length; i++) {
+//     arr[i].onclick = function click() {
+//       console.log('Button clicked');
+//         ans = "touch ~/" + this.id;
+//         child.exec(ans);
+//       }
+// }
 function goBackWebView(){
   window.location.replace("./index.html");
 }

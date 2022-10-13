@@ -4,17 +4,12 @@ const exec = require('child_process').execSync;
 var child = require('child_process');
 let arr = document.getElementsByTagName('button');
 
-// window.onload = function () {
-//   const myData = document.getElementById("res");
-//   const ret = document.getElementById('ret')
-//   const input = document.getElementById('search_package')
-//   // input.onclick =function() {
-//   //   window.location.replace("./index.html")
-//   // };
-// }
-const btn = document.querySelector("#btn");
-const myData = document.getElementById("res");
-btn.onclick = function () {
+window.onload = function () {
+  const myData = document.getElementById("res");
+  const ret = document.getElementById('ret');
+  const input = document.getElementById('search_package');
+  const btn = document.querySelector("#btn");
+  btn.onclick = function () {
   // 读取data.txt文件
   const input = document.getElementById('search_package')
   console.log(input.nodeValue);
@@ -24,45 +19,46 @@ btn.onclick = function () {
       fs.writeFileSync("data/temp", data, (err) => {
         console.log(err);
       });
+      let f = function() {
+        var exe = "sudo -S yay -S " + this.value + " < data/input";
+        console.log(exe);
+        child.exec(exe);
+        this.textContent = "installed";
+      }
       exec("python -u src/backend/search_package.py");
-      text = ""
       fs.readFile("data/aur_packages.json",(err, data)=> {
         // myData.innerText = data;
-        var json = JSON.parse(data)
-      for (var i = 0; i < json.length; i++) {
-        text = text +"<div id = \"package_box\"> "+ 
-        "<div style=\"float: left;\" id=\"box_text\">" +
-          "from: " + json[i].from + 
-        "</div>" + 
-        "<button style=\"float: right;\" id=\"download_bottom\">Install</button>" +
-        "<div style=\"float: right;\" id=\"box_text\">" + 
-        json[i].software + 
-        "</div>" + 
-        "</div>";
-    }
-      myData.innerHTML = text;
+        var json = JSON.parse(data);
+        for (var i = 0; i < json.length; i++) {
+          let node = document.createElement('div');
+          node.id = "package_box"
+
+          let from = document.createElement('div');
+          from.style = "float: left";
+          from.id = "box_text";
+          from.textContent = json[i].from;
+
+          let button = document.createElement('button');
+          button.style = "float: right";
+          button.id = "download_bottom";
+          button.value = json[i].software;
+          // To do 
+          button.onclick = f;
+          // 后面还需要判断是否已经安装
+          button.textContent = "Install";
+
+          let software = document.createElement('div');
+          software.id = "box_text";
+          software.style = "float: right";
+          software.textContent = json[i].software;
+          // software.onclick = f(json[i].software);
+          
+          node.appendChild(from);
+          node.appendChild(button);
+          node.appendChild(software);
+          myData.appendChild(node);
+        }
       } )
   })
-  arr = document.getElementsByTagName('button');
-  for (var i = 1; i < arr.length; i++) {
-    arr[i].addEventListener('click', function () {
-      console.log("dedede");
-      child.exec("touch ~/dede");
-    })
-}
-}
-// for (var i = 1; i < arr.length; i++) {
-//     arr[i].onclick = function click() {
-//       console.log('Button clicked');
-//         ans = "touch ~/" + this.id;
-//         child.exec(ans);
-//       }
-// }
-function goBackWebView(){
-  window.location.replace("./index.html");
-}
-
-
-function download(name) {
-  
+  }
 }

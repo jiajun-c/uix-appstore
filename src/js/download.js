@@ -28,6 +28,9 @@ window.onload = function () {
       exec("python -u src/backend/search_package.py");
       fs.readFile("data/aur_packages.json",(err, data)=> {
         // myData.innerText = data;
+        while(myData.hasChildNodes()) {
+          myData.removeChild(myData.firstChild);
+        }
         var json = JSON.parse(data);
         for (var i = 0; i < json.length; i++) {
           let node = document.createElement('div');

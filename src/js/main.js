@@ -135,7 +135,7 @@ function createWindow () {
             return;
         }else{
             if(!data){
-                mainWindow.loadFile('src/html/login.html');
+                mainWindow.loadFile('src/html/login_and_register/login.html');
                 return;
             }else{
                 mainWindow.loadFile('src/html/index.html');

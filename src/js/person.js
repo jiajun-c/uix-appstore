@@ -52,7 +52,7 @@ document.getElementById("useicon").onclick = ()=>{
         }else{
             if(data){
                 var json = JSON.parse(data);
-                fs.readFile(new URL(answerData), (err, dataImg)=>{
+                fs.readFile(answerData[0], (err, dataImg)=>{
                     if(err){
                         console.log(err.message);
                     }else{

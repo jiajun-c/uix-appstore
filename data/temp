@@ -2,12 +2,12 @@ aur/clash-meta-alpha-git Prerelease.Alpha.r0.g2899a12-1 (+0 0.00)
     A rule-based tunnel in Go
 aur/clash-dashboard-git 0.3.0.r102.ga70ad6b-3 (+0 0.00) 
     Web Dashboard for Clash
-aur/yacd-git 0.3.6.r12.ge405512-2 (+0 0.00) 
-    Yet Another Clash Dashboard
-aur/clashup 0.3.0-2 (+0 0.00) 
-    auto update clash's config file
 aur/clash-geoip 20221012-1 (+0 0.00) 
     A GeoLite2 data created by MaxMind
+aur/clashup 0.3.0-2 (+0 0.00) 
+    auto update clash's config file
+aur/yacd-git 0.3.6.r12.ge405512-3 (+0 0.00) 
+    Yet Another Clash Dashboard
 aur/potool-renamed 0.19-1 (+0 0.00) (Orphaned) 
     Program to help editing po files, without poedit name clash
 aur/hashclash-cuda-git r53.0df53bb-1 (+0 0.00) 
@@ -16,10 +16,10 @@ aur/clash-tun 20210920.r717.48a4641-1 (+0 0.00) (Orphaned)
     Clash Tun Scripts for Linux
 aur/clash-for-windows-bin-git 0.19.25-1 (+0 0.00) 
     A Windows/macOS/Linux GUI based on Clash and Electron.
-aur/clash-meta 1.13.1-1 (+1 0.80) 
-    Another Clash Kernel by MetaCubeX
 aur/clash-verge 1.1.1-1 (+1 0.80) 
     A Clash GUI based on tauri.
+aur/clashy-git 0.1.21-1 (+1 0.00) (Orphaned) 
+    A GUI proxy client for Windows / Mac / Ubuntu Desktop based on Clash and Electron. Windows / Mac / Ubuntu 适用的Clash客户端.
 aur/clash-subscription-updater-git r3.e2083ea-1 (+1 0.00) 
     Update the clash config.yaml peroidly with optional patch
 aur/gaurodan 1-2 (+1 0.00) 
@@ -30,8 +30,8 @@ aur/yacd 0.3.6-1 (+1 0.00)
     Yet Another Clash Dashboard
 aur/clash-dev-git 1.11.0.r0.gc231fd1-1 (+1 0.00) 
     A rule-based tunnel in Go
-aur/clashy-git 0.1.21-1 (+1 0.00) (Orphaned) 
-    A GUI proxy client for Windows / Mac / Ubuntu Desktop based on Clash and Electron. Windows / Mac / Ubuntu 适用的Clash客户端.
+aur/clash-meta 1.13.1-1 (+1 0.80) 
+    Another Clash Kernel by MetaCubeX
 aur/fclash 1.3.2-1 (+1 0.03) 
     A Clash Proxy Fronted based on Clash
 aur/clash-meta-bin 1.13.1-0 (+2 0.41) 
@@ -50,7 +50,7 @@ aur/clash-for-windows-bin 0.20.5-1 (+14 2.20)
     A Windows/macOS/Linux GUI based on Clash and Electron.
 archlinuxcn/yacd 0.3.6-1 (398.4 KiB 1.1 MiB) 
     Yet Another Clash Dashboard
-archlinuxcn/clash-verge 1.1.1-1 (4.2 MiB 8.1 MiB) 
+archlinuxcn/clash-verge 1.1.1-2 (4.2 MiB 8.1 MiB) 
     A Clash GUI based on tauri.
 archlinuxcn/clash-premium-bin 2022.03.21-1 (4.3 MiB 13.6 MiB) 
     Close-sourced pre-built Clash binary with TUN support
@@ -58,7 +58,7 @@ archlinuxcn/clash-meta 1.13.1-2 (6.3 MiB 21.1 MiB)
     Another Clash Kernel by MetaCubeX
 archlinuxcn/clash-git 1.11.8.r8.g3e2b08f-1 (3.1 MiB 9.9 MiB) 
     A rule-based tunnel in Go (git version)
-archlinuxcn/clash-geoip 20220912-2 (2.2 MiB 5.3 MiB) 
+archlinuxcn/clash-geoip 20221012-1 (2.2 MiB 5.3 MiB) 
     A GeoLite2 data created by MaxMind
 archlinuxcn/clash-dev-git 1.11.8.r8.g3e2b08f-1 (3.1 MiB 9.9 MiB) 
     A rule-based tunnel in Go

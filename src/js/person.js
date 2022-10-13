@@ -15,23 +15,6 @@ document.getElementById("signOut").onclick = ()=>{
 var webview =
 onload = () => {
     webview = document.querySelector('webview')
-    fs.readFile(path.join(__dirname ,"../../config/user.json"), (err, data)=>{
-        if(err){
-            console.log(err.message);
-        }else{
-            if(data.byteLength > 0){
-                let json = JSON.parse(data);
-                let url = "../../config/" + json.phone + '.png';
-                try{
-                    if(fs.existsSync(path.join(__dirname, url))){
-                        document.getElementById("useicon").src = url;
-                    }
-                }catch(err){
-                    console.log(err);
-                }
-            }
-        }
-    })
 }
 function goBackWebView(){
     window.location.replace("./index.html");
@@ -43,7 +26,7 @@ function goForwardWebView(){
 
 document.getElementById("useicon").onclick = ()=>{
     let answerData = ipcRenderer.sendSync("chooseAvatar");
-    if(answerData){
+    if(answerData != "Canceled"){
         document.getElementById("useicon").src = answerData;
         fs.readFile(path.join(__dirname, "../../config/user.json"), (err, data)=>{
             console.log(answerData);
@@ -58,6 +41,11 @@ document.getElementById("useicon").onclick = ()=>{
                     }else{
                         let url = "../../config/" + json.phone + '.png';
                         fs.writeFile(path.join(__dirname, url), dataImg, (err)=>{
+                            if(err){
+                                console.log(err.message);
+                            }
+                        })
+                        fs.writeFile(path.join(__dirname, "../img/arv.png"), dataImg, (err)=>{
                             if(err){
                                 console.log(err.message);
                             }

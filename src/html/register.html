@@ -12,6 +12,11 @@
             <h3 id="title">新用户注册</h3>
         </div>
         <form id="loginForm">
+            <div style="text-align: center;">
+                <span id="chooseAvatar">点击选择头像</span>
+                <span id="successAvatar" style="display: none; color: green;"> 选择成功</span>
+            </div>
+            <br/>
             <input type="text"id="phoneNum" placeholder="手机号">
             <span class="alert" id="repeatUser">用户已经存在</span>
             <br>
@@ -26,7 +31,7 @@
                 </div>
             </div>
         </form>
-        <br />
+        <br/>
         <div style="position: relative; left: 12%;">
             <button type="button" id="register">注册</button>
         </div>

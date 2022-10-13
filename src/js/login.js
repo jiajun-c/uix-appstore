@@ -58,6 +58,21 @@ document.getElementById('login').onclick = function(){
         answer.style.backgroundColor = 'white';
         answer.style.color = 'green';
         answer.innerHTML = answerData;
+        let tempUrl = "../../config/" + number + ".png";
+        fs.readFile(path.join(__dirname, tempUrl), (err, data)=>{
+            if(err){
+                console.log(err.message);
+            }else{
+                fs.writeFile(path.join(__dirname, "../img/arv.png"), data, (err)=>{
+                    if(err){
+                        console.log(err.message);
+                    }
+                })
+            }
+        })
+        setTimeout(()=>{
+            window.location.href = '../html/index.html';
+        }, 500)
     }else if(answerData === "密码错误"){
         document.getElementById("ErrPwd").style.display = "block";
     }else if(answerData === "用户不存在"){
@@ -67,10 +82,5 @@ document.getElementById('login').onclick = function(){
         answer.style.backgroundColor = 'white';
         answer.style.color = 'red';
         answer.innerHTML = answerData;
-    }
-    if(answerData == '登陆成功'){
-        setTimeout(()=>{
-            window.location.href = '../html/index.html';
-        }, 1000)
     }
 }

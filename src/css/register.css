@@ -2,6 +2,7 @@
     position: relative;
     margin: auto;
     max-height: 100px !important;
+    max-width: 100px !important;
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
     border-radius: 50% !important;
     left: 250px;
@@ -137,7 +138,7 @@
     color: black;
 }
 
-#spanPlace{
+#spanPlace, #chooseAvatar, #successAvatar{
     opacity: 0.7 !important;
     margin-right: 1rem !important;
     text-align: center !important;
@@ -145,6 +146,14 @@
     font-weight: 400;
     font-family: Poppins, Helvetica, "sans-serif";
     line-height: 1.5;
+}
+
+#chooseAvatar{
+    color: rgb(65, 175, 219);
+    border-radius: 10px;
+}
+#chooseAvatar:hover{
+    background-color: rgb(169, 227, 153);
 }
 #aPlace{
     font-weight: 500 !important;

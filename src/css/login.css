@@ -1,7 +1,8 @@
 .picture{
     position: relative;
     margin: auto;
-    max-height: 100px !important;
+    /* max-height: 100px !important;
+    max-width: 100px !important; */
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
     border-radius: 50% !important;
     left: 250px;
@@ -11,6 +12,15 @@
     box-sizing: border-box;
     cursor: pointer;
     text-align: center;
+    width: 100px;
+    height: 100px;
+    /* display: flex; */
+    margin: 10px 10px 10px 10px;
+    /* border-radius: 50%; */
+    align-items: center;
+    /* float: left; */
+    justify-content: center;
+    overflow: hidden;
 }
 
 .main{

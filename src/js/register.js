@@ -6,6 +6,8 @@ const path = require('path');
 const ipcRenderer = require('electron').ipcRenderer;
 
 
+var AvatarUrlGlobal = null;
+
 document.getElementById('register').onclick = function(){
     // console.log(document.getElementById("avatar").src)
     let avatarUrl = new String(document.getElementById("avatar").src);
@@ -33,43 +35,79 @@ document.getElementById('register').onclick = function(){
         answer.style.display = 'block';
         answer.style.color = 'green';
         answer.innerHTML = answerData;
-        if(urlName != "login.jpg"){
-            console.log(avatarUrl);
-            let index = avatarUrl.indexOf('/');
-            console.log(index);
-            let sub = avatarUrl.substring(index + 3);
-            // let sub2 = sub.replace("/", "/");
-            console.log(sub);
-            fs.readFile(new URL(sub), function(err, data){
+        if(AvatarUrlGlobal){
+            fs.readFile(AvatarUrlGlobal, (err, data)=>{
                 if(err){
                     console.log(err.message);
                 }else{
+                    fs.writeFile(path.join(__dirname, "../img/arv.png"), data, (err)=>{
+                        if(err){
+                            console.log(err.message);
+                        }
+                    })
                     let tempUrl = "../../config/" + phone + '.png';
                     fs.writeFile(path.join(__dirname, tempUrl), data, function(err){
                         if(err){
                             console.log(err.message);
                         }
                     })
-                    let userData = {'phone': phone, 'password': password};
-                    const userStr = JSON.stringify(userData);
-                    console.log(userStr);
-                    fs.writeFile(path.join(__dirname, "../../config/user.json"), userStr, function(err){
+                }
+            })
+        }else{
+            fs.readFile(path.join(__dirname, "../img/arv_copy.png"), (err, data)=>{
+                if(err){
+                    console.log(err.message);
+                }else{
+                    let tempUrl = "../../config/" + phone + '.png';
+                    fs.writeFile(path.join(__dirname, tempUrl), data, (err)=>{
                         if(err){
-                            console.log('用户信息写入文件失败');
                             console.log(err.message);
                         }
                     })
                 }
             })
         }
+        // if(urlName != "login.jpg"){
+        //     console.log(avatarUrl);
+        //     let index = avatarUrl.indexOf('/');
+        //     console.log(index);
+        //     let sub = avatarUrl.substring(index + 3);
+        //     // let sub2 = sub.replace("/", "/");
+        //     console.log(sub);
+        //     fs.readFile(new URL(sub), function(err, data){
+        //         if(err){
+        //             console.log(err.message);
+        //         }else{
+                    // let tempUrl = "../../config/" + phone + '.png';
+                    // fs.writeFile(path.join(__dirname, tempUrl), data, function(err){
+                    //     if(err){
+                    //         console.log(err.message);
+                    //     }
+                    // })
+        //             let userData = {'phone': phone, 'password': password};
+        //             const userStr = JSON.stringify(userData);
+        //             console.log(userStr);
+        //             fs.writeFile(path.join(__dirname, "../../config/user.json"), userStr, function(err){
+        //                 if(err){
+        //                     console.log('用户信息写入文件失败');
+        //                     console.log(err.message);
+        //                 }
+        //             })
+        //         }
+        //     })
+        // }
     }else if(answerData === "两次密码输入不一致"){
         document.getElementById("errPwd").style.display = 'block';
     }
 }
 
-document.getElementById("avatar").onclick = function(){
+document.getElementById("chooseAvatar").onclick = function(){
     let answerData = ipcRenderer.sendSync("chooseAvatar");
-    if(answerData){
-        document.getElementById("avatar").src = answerData;
+    if(answerData === "Canceled"){
+        return;
+    }else{
+        AvatarUrlGlobal = answerData[0];
+        console.log(AvatarUrlGlobal);
+        document.getElementById("successAvatar").style.display = "block";
     }
 }

@@ -56,11 +56,13 @@ ipcMain.on("chooseAvatar", function(event){
     dialog.showOpenDialog(myWindow_base, {
     properties: ['openFile'],
     filters: [
-        { name: 'Images', extensions: ['jpg', 'png', 'gif'] }
+        { name: 'Images', extensions: ['jpg', 'png'] }
     ]
     }).then(result => {
         if(!result.canceled){
             event.returnValue = result.filePaths;
+        }else{
+            event.returnValue = "Canceled";
         }
         return;
     }).catch(err => {

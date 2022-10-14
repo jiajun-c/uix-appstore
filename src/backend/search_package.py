@@ -1,5 +1,3 @@
-from asyncore import write
-from dis import disco
 import json
 
 # path = 
@@ -18,9 +16,7 @@ while line:
         # print(details)
         dicts.append({"from": details[0], "software": details[1]})
     line = f.readline()
-print(dicts)
 dicts = json.dumps(dicts)
-print(dicts)
 f.close()
 w = open("data/aur_packages.json", 'w')
 w.write(dicts)

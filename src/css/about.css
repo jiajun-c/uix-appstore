@@ -20,6 +20,7 @@
 }
 
 .information{
+    padding-left: 20px;
     margin: auto;
     display: table;
     font-family: Arial, Helvetica, sans-serif;
@@ -27,13 +28,23 @@
     width: 90%;
     height: 40px;
     line-height: 40px;
+<<<<<<< HEAD
     background-color: white;
+=======
+    /* background-color: rgb(178, 162, 162); */
+    background-color: rgb(178, 221, 250);
+    border-radius: 24px;
+>>>>>>> 45639df (实现软件管理)
     vertical-align: middle;
     border-bottom: 0.5px solid;
 }
 
 .information:hover{
+<<<<<<< HEAD
     background-color: rgb(182, 176, 176);
+=======
+    background-color: #65bdf3;
+>>>>>>> 45639df (实现软件管理)
 }
 
 #back{
@@ -52,9 +63,14 @@
 }
 
 #imgSpan{
+<<<<<<< HEAD
     border-radius: 50%;
 }
 
 #imgSpan:hover{
     background-color: bisque;
+=======
+    /* background-color:rgb(178, 221, 250); */
+    /* border-radius: 50%; */
+>>>>>>> 45639df (实现软件管理)
 }

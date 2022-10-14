@@ -27,13 +27,13 @@
     width: 90%;
     height: 40px;
     line-height: 40px;
-    background-color: rgb(178, 162, 162);
-    border-radius: 24px;
+    background-color: white;
     vertical-align: middle;
+    border-bottom: 0.5px solid;
 }
 
 .information:hover{
-    background-color: #beb8b8;
+    background-color: rgb(182, 176, 176);
 }
 
 #back{
@@ -52,6 +52,9 @@
 }
 
 #imgSpan{
-    background-color: rgb(178, 162, 162);
     border-radius: 50%;
+}
+
+#imgSpan:hover{
+    background-color: bisque;
 }

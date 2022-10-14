@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/server.css">
+    <title>Server</title>
+</head>
+<body>
+    <div style="background-color: AliceBlue ; display: block; width: 100%; height: 20px;">
+        <a href="./index.html"><img src="../img/return.png" style="width: 20px; position: absolute; left: 3%;" id="back"></a>
+        <!-- <button id="back">back</button> -->
+    </div>
+    <br/><br/>
+    <div id="main">
+        <span style="display: none;" id="count">1</span>
+        <img src="../img/arv.png" class="picture" >
+        <div style="text-align: center;">
+            <span id="UserName"></span>
+            <!-- 这个在正式上线后，会通过onload加载 -->
+        </div>
+        <br/><br/>
+        <div id="serverTable">
+            <br/>
+            <div class="servers">
+                <div class="FirstLine">
+                    <span class="information" id="ip1">ip:</span><input placeholder="ip" style="width: 20%;">
+                    <span class="information" id="host1">Host:</span><input placeholder="Host" style="width: 20%">
+                    <span class="information" id="pwd1">PassWord:</span><input placeholder="PassWord" style="width: 20%" type="password">
+                    <div style="display: inline-block;">
+                        <span>更多</span>
+                        <div style="text-align: center; width: 40px;height:40px; line-height:20px; float: right;">
+                            <div class="menu">
+                                <img alt="" src="../img/right.png" style="display: inline-block; vertical-align: middle; width: 20px; height: 20px;" class="imgSpan" onclick="dropDown(this.id);" id="img1" />
+                                <div class="dropDown" style="display: none; width: 40px; background-color: PaleTurquoise;" id="dropDown1">
+                                    <span>管理</span><br/>
+                                    <span>关机</span><br/>
+                                    <span>重启</span><br/>
+                                    <span>选项</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="FirstLine">
+                    &nbsp;&nbsp;<span style="padding-left: 10px;">DiscCapacity:&nbsp;</span><span>unknown</span>&nbsp;&nbsp;<span style="padding-left: 50px;">ConnectionStatus:&nbsp;</span><span>未连接</span>&nbsp;&nbsp;
+                    <button onmouseover="this.style.backgroundColor = 'CadetBlue'" onmouseleave="this.style.backgroundColor = 'PaleTurquoise'" style=" left: 150px; position: relative; background-color: PaleTurquoise; border-radius: 20%;" id="connect1">连接</button>
+                </div>
+            </div>
+            <br/>
+            <div style="margin: auto; width:90%;"><img src="../img/add.png" style="float: right; width: 20px; height: 20px;" id="add"></div>
+        </div>
+    </div>
+</body>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="../js/server.js"></script>
+</html>

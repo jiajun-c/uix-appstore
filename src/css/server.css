@@ -1,0 +1,67 @@
+.picture{
+    position: relative;
+    margin: auto;
+    max-height: 100px !important;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+    border-radius: 50% !important;
+    left: 350px;
+    background-color: #ffffff !important;
+    vertical-align: middle;
+    border-style: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+}
+#main{
+    margin: auto;
+    width: 800px;
+    background-color: white;
+}
+#back{
+    border-radius: 50%;
+}
+#back:hover{
+    background-color: rgb(170, 107, 230);
+}
+
+.imgSpan{
+    border-radius: 50%;
+}
+
+
+#serverTable{
+    height: 400px; 
+    width: 100%; 
+    margin: auto; 
+    border-radius: 24px; 
+    border-top: 1px solid;
+    overflow-y:visible;
+}
+
+.servers{
+    width: 90%; 
+    margin:auto; 
+    border: 1px solid; 
+    height: 70px; 
+    border-radius: 20px; 
+    background-color: PaleTurquoise;
+    border-color: PaleTurquoise;
+}
+
+.FirstLine{
+    width: 100%; 
+    margin:auto;
+    height: 40px; 
+    border-radius: 20px;
+}
+
+.information{
+    padding-left: 10px;
+}
+.dropDown span, .dropDown{
+    position: absolute;
+    display: block;
+    padding-left: 1px;
+    z-index: 999;
+    background-color: PaleTurquoise;
+}

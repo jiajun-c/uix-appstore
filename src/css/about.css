@@ -16,7 +16,7 @@
     margin: auto;
     width: 600px;
     height: 600px;
-    background-color: white;
+    background-color: 	white;
 }
 
 .information{
@@ -27,13 +27,14 @@
     width: 90%;
     height: 40px;
     line-height: 40px;
-    background-color: white;
+    background-color: PowDerBlue;
     vertical-align: middle;
-    border-bottom: 0.5px solid;
+    border-color: PowDerBlue;
+    border-radius: 20px;
 }
 
 .information:hover{
-    background-color: rgb(182, 176, 176);
+    background-color: LightSkyBlue;
 }
 
 #back{

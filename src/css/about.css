@@ -20,13 +20,16 @@
 }
 
 .information{
-    
-    display: block;
+    margin: auto;
+    display: table;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
-    width: 100%;
+    width: 90%;
     height: 40px;
     line-height: 40px;
+    background-color: rgb(178, 162, 162);
+    border-radius: 24px;
+    vertical-align: middle;
 }
 
 .information:hover{
@@ -46,4 +49,9 @@
 
 #back:hover{
     background-color: rgb(170, 107, 230);
+}
+
+#imgSpan{
+    background-color: rgb(178, 162, 162);
+    border-radius: 50%;
 }

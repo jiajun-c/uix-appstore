@@ -7,7 +7,7 @@ const ipcRenderer = require('electron').ipcRenderer;
 var userData;
 
 onload = ()=>{
-    fs.readFile(path.join(__dirname, "../../config/user.json"), (err, data)=>{
+    fs.readFile(path.join(__dirname, "../../../config/user.json"), (err, data)=>{
         if(err){
             console.log(err.message);
         }else{
@@ -18,7 +18,7 @@ onload = ()=>{
                 document.getElementById("phoneNum").value = json.phone;
                 document.getElementById("pwd").value = json.password;
                 console.log(json);
-                let url = '../../config/' + json.phone + '.png';
+                let url = '../../../config/' + json.phone + '.png';
                 try{
                     if(fs.existsSync(path.join(__dirname, url))){
                         document.getElementById("avatar").src = url;
@@ -36,7 +36,7 @@ onload = ()=>{
 document.getElementById("phoneNum").oninput = ()=>{
     let phone = document.getElementById("phoneNum").value;
     try{
-        let url = '../../config/' + phone + '.png';
+        let url = '../../../config/' + phone + '.png';
         if(fs.existsSync(path.join(__dirname, url))){
             document.getElementById("avatar").src = url;
         }
@@ -58,12 +58,12 @@ document.getElementById('login').onclick = function(){
         answer.style.backgroundColor = 'white';
         answer.style.color = 'green';
         answer.innerHTML = answerData;
-        let tempUrl = "../../config/" + number + ".png";
+        let tempUrl = "../../../config/" + number + ".png";
         fs.readFile(path.join(__dirname, tempUrl), (err, data)=>{
             if(err){
                 console.log(err.message);
             }else{
-                fs.writeFile(path.join(__dirname, "../img/arv.png"), data, (err)=>{
+                fs.writeFile(path.join(__dirname, "../../img/arv.png"), data, (err)=>{
                     if(err){
                         console.log(err.message);
                     }
@@ -71,7 +71,7 @@ document.getElementById('login').onclick = function(){
             }
         })
         setTimeout(()=>{
-            window.location.href = '../html/index.html';
+            window.location.href = '../index.html';
         }, 500)
     }else if(answerData === "密码错误"){
         document.getElementById("ErrPwd").style.display = "block";

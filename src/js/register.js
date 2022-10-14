@@ -40,12 +40,12 @@ document.getElementById('register').onclick = function(){
                 if(err){
                     console.log(err.message);
                 }else{
-                    fs.writeFile(path.join(__dirname, "../img/arv.png"), data, (err)=>{
+                    fs.writeFile(path.join(__dirname, "../../img/arv.png"), data, (err)=>{
                         if(err){
                             console.log(err.message);
                         }
                     })
-                    let tempUrl = "../../config/" + phone + '.png';
+                    let tempUrl = "../../../config/" + phone + '.png';
                     fs.writeFile(path.join(__dirname, tempUrl), data, function(err){
                         if(err){
                             console.log(err.message);
@@ -54,11 +54,11 @@ document.getElementById('register').onclick = function(){
                 }
             })
         }else{
-            fs.readFile(path.join(__dirname, "../img/arv_copy.png"), (err, data)=>{
+            fs.readFile(path.join(__dirname, "../../img/arv_copy.png"), (err, data)=>{
                 if(err){
                     console.log(err.message);
                 }else{
-                    let tempUrl = "../../config/" + phone + '.png';
+                    let tempUrl = "../../../config/" + phone + '.png';
                     fs.writeFile(path.join(__dirname, tempUrl), data, (err)=>{
                         if(err){
                             console.log(err.message);

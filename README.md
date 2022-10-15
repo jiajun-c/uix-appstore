@@ -18,14 +18,8 @@
 
 ## 2. 需求
 
-### This week
-1. 实现about界面，样式使用网易云往事，添加协议和git仓库，开发者，以及项目介绍，都和网易一样点击查看更加详细
-2. 需求分析报告，需要和现有linux商店产品进行比较，了解一下各种发行版的包管理技术，以及我们项目的特点，需要向老师介绍
-3. 了解项目，设计新功能
-4. 注意其他ddl结束时间
+
 ### You
-- [ ] 在aur链接部分添加一个返回上一级页面的按钮，可以用栈实现。 ddl: 10.4 check
-- [ ] 用户只需要登录一次, 在`config/user.json`中存放用户的信息 ddl: 10.5 check
 - [ ] 编写`html/servers.html`，在其中显示了我们连接的服务器的情况(可以使用ssh 连接)
 ![image.png](https://s2.loli.net/2022/09/29/Yrf8kRuK5dqp6iA.png)
 页面布局如上，每个框对应一个服务器
@@ -43,63 +37,32 @@ connect: 这是个按钮，进行ssh连接
 ddl : 10.15
 初始情况下没有框，需要有根据ip，user, passwd连接服务器，连接后获取服务器其他信息。
 
+- [ ] 点击服务器后可以进入到服务器的详细界面，界面上需要显示发行版类型，ip, CPU， GPU类型， 硬盘，cpu使用情况，可以参考下面的腾讯云，页面先在幕刀上进行设计，注意美观。
+
+![image.png](https://s2.loli.net/2022/10/15/tLTHF9qXcvDJGwB.png)
+
+ddl: 10:20
+
+
+点击登录后出现一个webshell，远程操作服务器，参考腾讯云
+
+![image.png](https://s2.loli.net/2022/10/15/dLafs2ozI79vpQN.png)
+ddl: 10:24
+
+
 ### ME
-- [ ] 开发download部分
-1. 调用archlinux api 进行软件包的查询，获取到json文件，对结果进行解析后存储到本地
-2. 实现本机和服务器的切换，在下载软件包的时候可以为本机/服务器下载(计划使用ssh进行登录)，下载计划调用`shell script`进行实现。
-3. 实现动态前端页面进行机器的切换，尽量实现按钮点击特效。
-ddl: 10.15
 
-- [ ] 开发搜索引擎
-根据关键字对软件包进行查找，随后进行上面的操作
-ddl: 10.18
+- [ ] 实现开发者界面，开发者可以上传自己的软件包（使用PKGBUILD方式），需要将软件包上传到远程服务器
+ddl：10:20
 
-- [ ] 对搜索栏进行美化
-ddl: 10.20
+- [ ] 开发后端，处理开发者上传的软件包, 同时将软件包加载到可搜索的源中，可以被搜索到
+ddl：10:25
 
 
 ## 3. 已经实现的模块
-- 实现了主页，同时可以进行正常的跳转
-![image.png](https://s2.loli.net/2022/09/26/BXwbLAPav8i13cK.png)
-
-- 实现了个人中心，可以正常返回主页面
-
-- 实现登录界面
-
-在服务器上的数据库 
-```shell
-MySQL [app_user]> desc user;
-+----------+-------------+------+-----+---------+----------------+
-| Field    | Type        | Null | Key | Default | Extra          |
-+----------+-------------+------+-----+---------+----------------+
-| uid      | int(11)     | NO   | PRI | NULL    | auto_increment |
-| username | varchar(30) | NO   |     | NULL    |                |
-| passwd   | varchar(20) | NO   |     | NULL    |                |
-+----------+-------------+------+-----+---------+----------------+
-3 rows in set (0.00 sec)
-```
-
-要求：登录成功后跳转到主页面(`src/html/index.html`)，失败给出红色字体提示。
-
-效果图类似，但是需要添加注册功能，直接输入帐号名，两次相同的密码即可注册。
-![image.png](https://s2.loli.net/2022/09/23/hZDwiPqJndYQ6mk.png)
-
-- 实现aur链接模块
-
-主页上面的aur链接需要跳转到到一个单独的html，在这个页面中需要内嵌下面的页面，同时可以返回到原来的界面，所以不能使用简单连接跳转了事。
-```shell
-https://aur.archlinux.org/
-```
-可以参考我写的个人中心界面，不要简单的复制粘贴.....
-![image.png](https://s2.loli.net/2022/09/26/nS6qEWd2fcY3GUr.png)
-
-- 实现页面上的查找功能和结果显示
-![image.png](https://s2.loli.net/2022/10/02/Wz3P9nOykYKRrt5.png)
-
-
-- 实现将结果插入到html代码中
-![image.png](https://s2.loli.net/2022/10/03/YWQfMKi4s7JEetv.png)
-
-- 搜索框更新， 后续还需要修改。
-
-![image.png](https://s2.loli.net/2022/10/09/qWSfoR3gjkPT1FM.png)
+- 个人界面
+- 下载界面
+- about界面
+- 登录界面
+- 注册界面
+- 主界面

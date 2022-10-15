@@ -2,7 +2,7 @@
     position: relative;
     margin: auto;
     max-height: 100px !important;
-    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+    /* box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important; */
     border-radius: 50% !important;
     left: 250px;
     background-color: #ffffff !important;
@@ -37,7 +37,7 @@
 }
 
 .information:hover{
-    background-color: rgb(182, 176, 176);
+    background-color: rgb(119, 165, 240);
 }
 
 #back{
@@ -60,5 +60,5 @@
 }
 
 #imgSpan:hover{
-    background-color: bisque;
+    background-color: rgb(170, 166, 255);
 }

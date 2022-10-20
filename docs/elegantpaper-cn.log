@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.9.12)  17 OCT 2022 12:29
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.9.12)  17 OCT 2022 22:14
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1032,7 +1032,7 @@ Package logreq Info: Writing requests to 'elegantpaper-cn.run.xml'.
 Here is how much of TeX's memory you used:
  29417 strings out of 476156
  591494 string characters out of 5814963
- 1450064 words of memory out of 5000000
+ 1450067 words of memory out of 5000000
  49769 multiletter control sequences out of 15000+600000
  480634 words of font info for 129 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

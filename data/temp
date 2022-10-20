@@ -36,7 +36,7 @@ local/appstream-glib 0.8.1-1
     Objects and methods for reading and writing AppStream metadata
 local/appstream-qt 0.15.5-1
     Qt5 interface for AppStream
-local/archlinux-appstream-data 20220830-1
+local/archlinux-appstream-data 20221014-1
     Arch Linux application database for AppStream-based software centers
 local/archlinux-keyring 20220927-1 (base-devel)
     Arch Linux PGP keyring
@@ -86,6 +86,8 @@ local/bind 9.18.7-1
     A complete, highly portable implementation of the DNS protocol
 local/binutils 2.39-3 (base-devel)
     A set of programs to assemble and manipulate binary and object files
+local/bison 3.8.2-4 (base-devel)
+    The GNU general-purpose parser generator
 local/blas 3.10.1-1
     Basic Linear Algebra Subprograms
 local/bluedevil 1:5.26.0-1 (plasma)
@@ -152,6 +154,8 @@ local/clash-dashboard-git 0.3.0.r184.g23db9ed-1
     Web Dashboard for Clash
 local/clash-for-windows-chinese 0.20.5-1
     A Windows/macOS/Linux GUI based on Clash and Electron（Chinese version.）.
+local/cmake 3.24.2-1
+    A cross-platform open-source make system
 local/compiler-rt 14.0.6-1
     Compiler runtime libraries for clang
 local/confuse 3.3-3
@@ -196,11 +200,11 @@ local/djvulibre 3.5.28-3
     Suite to create, manipulate and view DjVu ('déjà vu') documents
 local/dmidecode 3.4-1
     Desktop Management Interface table related utilities
-local/dmraid 1.0.0.rc16.3-13
+local/dmraid 1.0.0.rc16.3-14
     Device mapper RAID interface
 local/dnssec-anchors 20190629-3
     DNSSEC trust anchors for the root zone
-local/docker 1:20.10.18-1
+local/docker 1:20.10.19-1
     Pack, ship and run any application as a lightweight container
 local/dolphin 22.08.2-1 (kde-applications kde-system)
     KDE File Manager
@@ -366,7 +370,7 @@ local/gnome-alsamixer 0.9.7-4
     Gnome ALSA mixer
 local/gnu-free-fonts 20120503-8
     A free family of scalable outline fonts
-local/gnupg 2.2.39-1
+local/gnupg 2.2.40-1
     Complete and free implementation of the OpenPGP standard
 local/gnutls 3.7.8-1
     A library which provides a secure layer over a reliable transport layer
@@ -388,7 +392,7 @@ local/graphene 1.10.8-1
     A thin layer of graphic data types
 local/graphite 1:1.3.14-2
     reimplementation of the SIL Graphite text processing engine
-local/graphviz 6.0.1-1
+local/graphviz 6.0.2-1
     Graph visualization software
 local/grep 3.8-2 (base-devel)
     A string search utility
@@ -518,7 +522,7 @@ local/kbd 2.5.1-1
     Keytable files and keyboard utilities
 local/kbookmarks 5.99.0-1 (kf5)
     Support for bookmarks and the XBEL format
-local/kcmutils 5.99.0-1 (kf5)
+local/kcmutils 5.99.0-2 (kf5)
     Utilities for interacting with KCModules
 local/kcodecs 5.99.0-1 (kf5)
     Provide a collection of methods to manipulate strings using various encodings
@@ -628,7 +632,7 @@ local/krb5 1.20-1
     The Kerberos network authentication system
 local/krunner 5.99.0-1 (kf5)
     Framework for providing different actions given a string query
-local/kscreen 5.26.0-1 (plasma)
+local/kscreen 5.26.0-2 (plasma)
     KDE screen management software
 local/kscreenlocker 5.26.0-1 (plasma)
     Library and components for secure lock screen architecture
@@ -766,7 +770,7 @@ local/lib32-llvm-libs 14.0.6-2
     LLVM runtime libraries (32-bit)
 local/lib32-lm_sensors 1:3.6.0.r41.g31d1f125-1
     Collection of user space tools for general SMBus access and hardware monitoring (32-bit)
-local/lib32-mesa 22.1.7-1
+local/lib32-mesa 22.2.1-1
     An open-source implementation of the OpenGL specification (32-bit)
 local/lib32-ncurses 6.3-1
     System V Release 4.0 curses emulation library (32-bit)
@@ -824,7 +828,7 @@ local/libbpf 1.0.1-1
     Library for loading eBPF programs and reading and manipulating eBPF objects from user-space
 local/libbs2b 3.1.0-8
     Bauer stereophonic-to-binaural DSP effect library
-local/libbsd 0.11.6-2
+local/libbsd 0.11.7-1
     Provides useful functions commonly found on BSD systems like strlcpy()
 local/libbytesize 2.7-1
     A tiny library providing a C "class" for working with arbitrary big sizes in bytes
@@ -1136,7 +1140,7 @@ local/libvpx 1.12.0-1
     VP8 and VP9 codec
 local/libvterm 0.3-1
     Abstract library implementation of a VT220/xterm/ECMA-48 terminal emulator
-local/libwacom 2.4.0-1
+local/libwacom 2.5.0-1
     Library to identify Wacom tablets and their features
 local/libwebp 1.2.4-1
     WebP library and conversion tools
@@ -1220,7 +1224,7 @@ local/licenses 20220125-1
     A set of common license files
 local/lightly-qt 0.4.1-1
     A modern style for qt applications
-local/linux 6.0.1.arch1-1
+local/linux 6.0.2.arch1-1
     The Linux kernel and modules
 local/linux-api-headers 5.18.15-1
     Kernel headers sanitized for use in userspace
@@ -1228,7 +1232,7 @@ local/linux-firmware 20220913.f09bebf-1
     Firmware files for Linux
 local/linux-firmware-whence 20220913.f09bebf-1
     Firmware files for Linux - contains the WHENCE license file which documents the vendor license details
-local/linux-headers 6.0.1.arch1-1
+local/linux-headers 6.0.2.arch1-1
     Headers and scripts for building modules for the Linux kernel
 local/llvm 14.0.6-3
     Compiler infrastructure
@@ -1266,8 +1270,10 @@ local/m4 1.4.19-1 (base-devel)
     The GNU macro processor
 local/make 4.3-3 (base-devel)
     GNU make utility to maintain groups of programs
-local/man-db 2.10.2-1
+local/man-db 2.11.0-1
     A utility for reading man pages
+local/man-pages 6.00-1
+    Linux man pages
 local/mariadb 10.9.3-1
     Fast SQL database server, derived from MySQL
 local/mariadb-clients 10.9.3-1
@@ -1284,13 +1290,13 @@ local/mdbook 0.4.21-1
     Create book from markdown files, like Gitbook but implemented in Rust
 local/media-player-info 24-2
     Data files describing media player capabilities, for post-HAL systems
-local/mesa 22.1.7-1
+local/mesa 22.2.1-1
     An open-source implementation of the OpenGL specification
 local/mesa-utils 8.5.0-2
     Essential Mesa utilities
 local/milou 5.26.0-1 (plasma)
     A dedicated search application built on top of Baloo
-local/minizip 1:1.2.12-2
+local/minizip 1:1.2.13-1
     Mini zip and unzip based on zlib
 local/mkinitcpio 31-3
     Modular initramfs image creation utility
@@ -1310,7 +1316,7 @@ local/msgpack-c 4.0.0-1
     An efficient object serialization library
 local/mtdev 1.1.6-2
     A stand-alone library which transforms all variants of kernel MT events to the slotted type B protocol
-local/mujs 1.2.0-2
+local/mujs 1.3.0-1
     An embeddable Javascript interpreter in C
 local/mycli 1.25.0-1
     A Terminal Client for MySQL with AutoCompletion and Syntax Highlighting
@@ -1336,7 +1342,7 @@ local/nmap 7.92-1
     Utility for network discovery and security auditing
 local/node-gyp 9.2.0-1
     Node.js native addon build tool
-local/nodejs 18.10.0-1
+local/nodejs 18.11.0-1
     Evented I/O for V8 javascript
 local/nodejs-nopt 6.0.0-1
     Node/npm Option Parsing library
@@ -1402,7 +1408,7 @@ local/package-query 1.12-1
     Query ALPM and AUR
 local/pacman 6.0.1-8 (base-devel)
     A library-based package manager with dependency support
-local/pacman-mirrorlist 20220828-1
+local/pacman-mirrorlist 20221016-1
     Arch Linux mirror list for use by pacman
 local/pahole 1:1.24-1
     Pahole and other DWARF utils
@@ -1534,6 +1540,8 @@ local/python-asgiref 3.5.2-1
     Reference ASGI adapters and channel layers
 local/python-astroid 2.12.11-1
     A common base representation of python source code
+local/python-attrs 22.1.0-1
+    Attributes without boilerplate.
 local/python-cffi 1.15.1-1
     Foreign Function Interface for Python calling C code
 local/python-chardet 5.0.0-1
@@ -1574,9 +1582,11 @@ local/python-markupsafe 2.1.1-1
     Implements a XML/HTML/XHTML Markup safe string for Python
 local/python-mccabe 0.7.0-1
     McCabe complexity checker for Python
+local/python-packaging 21.3-1
+    Core utilities for Python packages
 local/python-pexpect 4.8.0-6
     For controlling and automating applications
-local/python-pip 22.2.2-2
+local/python-pip 22.3-1
     The PyPA recommended tool for installing Python packages
 local/python-platformdirs 2.5.2-1
     A small Python module for determining appropriate platform-specific dirs, e.g. a "user data dir"
@@ -1598,6 +1608,8 @@ local/python-pylint 2.14.5-1
     Analyzes Python code looking for bugs and signs of poor quality
 local/python-pymysql 1.0.2-3
     Pure Python MySQL Client
+local/python-pyparsing 3.0.9-1
+    General parsing module for Python
 local/python-pyperclip 1.8.2-4
     A cross-platform clipboard module for Python
 local/python-pytz 2022.1-1
@@ -1614,7 +1626,7 @@ local/python-toml 0.10.2-8
     A Python library for parsing and creating TOML
 local/python-tomli 2.0.1-1
     A lil' TOML parser
-local/python-tomlkit 0.11.4-1
+local/python-tomlkit 0.11.5-1
     Style-preserving TOML library for Python
 local/python-typing_extensions 4.3.0-1
     Backported and Experimental Type Hints for Python 3.7+
@@ -1622,6 +1634,8 @@ local/python-virtualenv 20.16.2-1
     Virtual Python Environment builder
 local/python-wcwidth 0.2.5-6
     Measures number of Terminal column cells of wide-character codes
+local/python-wheel 0.37.1-1
+    A built-package format for Python
 local/python-wrapt 1.14.1-1
     A Python module for decorators, wrappers and monkey patching
 local/qca-qt5 2.3.4-3
@@ -1696,6 +1710,8 @@ local/re2 1:20220601-1
     Fast, safe, thread-friendly regular expression engine
 local/readline 8.1.002-1
     GNU readline library
+local/rhash 1.4.2-1
+    Utility for verifying hash sums of files
 local/rime-bopomofo 0.0.0.20210131-1
     Bopomofo input for rime
 local/rime-cangjie 0.0.0.20210223-1
@@ -1918,11 +1934,11 @@ local/syntax-highlighting 5.99.0-1 (kf5)
     Syntax highlighting engine for structured text and code
 local/sysfsutils 2.1.1-1
     System Utilities Based on Sysfs
-local/systemd 251.5-1
+local/systemd 251.6-1
     system and service manager
-local/systemd-libs 251.5-1
+local/systemd-libs 251.6-1
     systemd client libraries
-local/systemd-sysvcompat 251.5-1
+local/systemd-sysvcompat 251.6-1
     sysvinit compat for systemd
 local/systemsettings 5.26.0-1 (plasma)
     KDE system manager for hardware, software, and workspaces
@@ -2014,7 +2030,7 @@ local/ttf-opensans 1.101-2
     Sans-serif typeface commissioned by Google
 local/typora 1.4.7-1
     A minimal markdown editor and reader.
-local/tzdata 2022d-1
+local/tzdata 2022e-1
     Sources for time zone and daylight saving time data
 local/uchardet 0.0.7-1
     Encoding detector library ported from Mozilla
@@ -2036,8 +2052,6 @@ local/util-linux 2.38.1-1
     Miscellaneous system utilities for Linux
 local/util-linux-libs 2.38.1-1
     util-linux runtime libraries
-local/v2ray-domain-list-community 20221013135753-1
-    A list of domains to be used as geosites for routing purpose in Project V
 local/v2ray-geoip 202210130107-1
     GeoIP List for V2Ray
 local/v4l-utils 1.22.1-1
@@ -2046,7 +2060,7 @@ local/verilator 4.228-1
     The fastest free Verilog HDL simulator
 local/vid.stab 1.1-3
     Video stabilization library
-local/visual-studio-code-bin 1.72.1-1
+local/visual-studio-code-bin 1.72.2-1
     Visual Studio Code (vscode): Editor for building and debugging modern web and cloud applications (official binary version)
 local/vmaf 2.3.1-1
     Perceptual video quality assessment algorithm based on multi-method fusion
@@ -2064,7 +2078,7 @@ local/vulkan-tools 1.3.226-1 (vulkan-devel)
     Vulkan Utilities and Tools
 local/wayland 1.21.0-1
     A computer display server protocol
-local/wayland-protocols 1.26-1
+local/wayland-protocols 1.27-1
     Specifications of extended Wayland protocols
 local/wayland-utils 1.1.0-1
     Wayland tools to display information about current compositor
@@ -2188,7 +2202,7 @@ local/zeromq 4.3.4-2
     Fast messaging system built on sockets. C and C++ bindings. aka 0MQ, ZMQ.
 local/zimg 3.0.4-1
     Scaling, colorspace conversion, and dithering library
-local/zlib 1:1.2.12-2
+local/zlib 1:1.2.13-1
     Compression library implementing the deflate compression method found in gzip and PKZIP
 local/zsh 5.9-1
     A very advanced and programmable command interpreter (shell) for UNIX

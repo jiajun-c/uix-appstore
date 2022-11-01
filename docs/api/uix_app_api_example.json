@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "06870f0a-9516-4cb7-9903-84250f983c36",
+		"name": "uix_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24175527"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"cjj\",\n    \"password\": \"deded\",\n    \"phone\": \"17805532976\"\n}"
+				},
+				"url": {
+					"raw": "www.halfcs.top:8080/api/user/signup",
+					"host": [
+						"www",
+						"halfcs",
+						"top"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"cjj\",\n    \"password\": \"deded\",\n    \"phone\": \"1780553296\"\n}"
+				},
+				"url": {
+					"raw": "www.halfcs.top:8080/api/user/login",
+					"host": [
+						"www",
+						"halfcs",
+						"top"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

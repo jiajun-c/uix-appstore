@@ -24,6 +24,8 @@ ps: 功能正确后再合并到主分支
 ### 2.2 登录api
 ![image.png](https://s2.loli.net/2022/11/01/cg6KPls1fNoI2SA.png)
 
+### 2.3 文件上传api
+![image.png](https://s2.loli.net/2022/11/01/5pMIqvgTjxcYU3C.png)
 ## 3. 已经实现的模块
 - 个人界面
 - 下载界面
